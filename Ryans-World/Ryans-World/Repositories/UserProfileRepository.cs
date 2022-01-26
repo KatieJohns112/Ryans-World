@@ -20,11 +20,11 @@ namespace Ryans_World.Repositories
                     using (var cmd = conn.CreateCommand())
                     {
                         cmd.CommandText = @"
-                        SELECT up.Id, up.FirebaseUserId, up.FirstName, up.LastName, up.DisplayName, 
+                        SELECT up.Id, up.FireBaseUserId, up.FirstName, up.LastName, up.DisplayName, 
                                up.Email, up.ImageLocation
-                         WHERE up.FirebaseUserId = @FirebaseuserId";
+                         WHERE up.FirebaseUserId = @FireBaseUserId";
 
-                        DbUtils.AddParameter(cmd, "@FirebaseUserId", firebaseUserId);
+                        DbUtils.AddParameter(cmd, "@FireBaseUserId", firebaseUserId);
 
                         UserProfile userProfile = null;
 
@@ -34,7 +34,7 @@ namespace Ryans_World.Repositories
                             userProfile = new UserProfile()
                             {
                                 Id = DbUtils.GetInt(reader, "Id"),
-                                FirebaseUserId = DbUtils.GetString(reader, "FirebaseUserId"),
+                                FireBaseUserId = DbUtils.GetString(reader, "FireBaseUserId"),
                                 FirstName = DbUtils.GetString(reader, "FirstName"),
                                 LastName = DbUtils.GetString(reader, "LastName"),
                                 DisplayName = DbUtils.GetString(reader, "DisplayName"),

@@ -3,7 +3,6 @@ import { NavLink as RRNavLink } from "react-router-dom";
 import {
     Collapse,
     Navbar,
-    NavbarToggler,
     NavbarBrand,
     Nav,
     NavItem,
@@ -18,8 +17,8 @@ export default function Header({ isLoggedIn }) {
     return (
         <div>
             <Navbar color="light" light expand="md">
-                <NavbarBrand tag={RRNavLink} to="/">Tabloid</NavbarBrand>
-                <NavbarToggler onClick={toggle} />
+                <NavbarBrand tag={RRNavLink} to="/">Ryans World</NavbarBrand>
+
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="mr-auto" navbar>
                         { /* When isLoggedIn === true, we will render the Home link */}
