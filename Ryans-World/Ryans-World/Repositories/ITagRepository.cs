@@ -6,5 +6,6 @@ namespace Ryans_World.Repositories
     public interface ITagRepository
     {
         List<Tag> GetAll();
+        void Add(Tag tag);
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Ryans_World.Models;
 using Ryans_World.Repositories;
 using System;
 using System.Collections.Generic;
@@ -22,6 +23,13 @@ namespace Ryans_World.Controllers
         public IActionResult Get()
         {
             return Ok(_tagRepository.GetAll());
+        }
+
+        [HttpPost]
+        public IActionResult Add(Tag tag)
+        {
+            _tagRepository.Add(tag);
+            return CreatedAtAction("Get", new { id = tag.Id }, tag);
         }
     }
 }
