@@ -8,6 +8,10 @@ export const TagCard = ({ tag }) => {
         history.push(`/deleteTag/${tag.id}`)
     };
 
+    const handleUpdateTag = () => {
+        history.push(`/editTag/${tag.id}`);
+    };
+
     return (
         <div classsName="TagBox">
             <div className="TagCard">
@@ -16,6 +20,9 @@ export const TagCard = ({ tag }) => {
             <button className="DeleteTag"
                 type="button" onClick={() => handleDeleteTag(tag.id)}>
                 Delete Tag</button>
+            <button className="DeleteTag"
+                type="button" onClick={() => handleUpdateTag(tag.id)}>
+                Update</button>
         </div>
     )
 }

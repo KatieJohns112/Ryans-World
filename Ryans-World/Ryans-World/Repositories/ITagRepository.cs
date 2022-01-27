@@ -8,5 +8,7 @@ namespace Ryans_World.Repositories
         List<Tag> GetAll();
         void Add(Tag tag);
         void Delete(int id);
+        void Update(Tag tag);
+        Tag GetTagById(int id);
     }
 }
