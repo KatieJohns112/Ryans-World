@@ -20,6 +20,13 @@ export const TagList = () => {
 
     return (
         <>
+            <div className="NewTag">
+                <button type="button"
+                    className="NewTagButton"
+                    onClick={() => { history.push("/tag/create"); }}>
+                    Create new Tag
+                </button>
+            </div>
             <div>
                 <div className="TagContent">
                     <div className="TagList">
