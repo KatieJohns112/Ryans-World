@@ -7,6 +7,7 @@ import TagList from "./Tag/TagList";
 import TagForm from "./Tag/NewTagForm";
 import DeleteTag from "./Tag/DeleteTag";
 import TagUpdateForm from "./Tag/EditTag";
+import BookForm from "./Book/NewBookForm";
 
 export default function ApplicationViews({ isLoggedIn }) {
 
@@ -18,6 +19,9 @@ export default function ApplicationViews({ isLoggedIn }) {
                 </Route>
                 <Route path="/book" exact>
                     {isLoggedIn ? <BookList /> : <Redirect to="/login" />}
+                </Route>
+                <Route path="/createBook">
+                    {isLoggedIn ? <BookForm /> : <Redirect to="/login" />}
                 </Route>
                 <Route path="/tag" exact>
                     {isLoggedIn ? <TagList /> : <Redirect to="/login" />}

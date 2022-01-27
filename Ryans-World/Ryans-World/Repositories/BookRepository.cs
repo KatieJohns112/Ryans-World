@@ -66,5 +66,31 @@ namespace Ryans_World.Repositories
                 }
             }
         }
+
+        public void Add(Book book)
+        {
+            using (var conn = Connection)
+            {
+                conn.Open();
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = @"INSERT INTO Book (Title, Author, DayOfWeek, FavoriteScale,
+                                        UserProfileId, CategoryId, ImageLocation)
+                                        OUTPUT INSERTED.ID
+                                        VALUES (@Title, @Author, @DayOfWeek, @FavoriteScale, @UserProfileId,
+                                        @CategoryId, @ImageLocation)";
+
+                    cmd.Parameters.AddWithValue("@Title", book.Title);
+                    cmd.Parameters.AddWithValue("@Author", book.Author);
+                    cmd.Parameters.AddWithValue("@DayOfWeek", book.DayOfWeek);
+                    cmd.Parameters.AddWithValue("@FavoriteScale", book.FavoriteScale);
+                    cmd.Parameters.AddWithValue("@UserProfileId", book.UserProfileId);
+                    cmd.Parameters.AddWithValue("@CategoryId", book.CategoryId);
+                    cmd.Parameters.AddWithValue("@ImageLocation", book.ImageLocation);
+
+                    book.Id = (int)cmd.ExecuteScalar();
+                }
+            }
+        }
     }
 }

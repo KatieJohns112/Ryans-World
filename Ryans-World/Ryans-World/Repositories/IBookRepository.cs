@@ -9,5 +9,6 @@ namespace Ryans_World.Repositories
     public interface IBookRepository
     {
         List<Book> GetAll();
+        void Add(Book book);
     }
 }
