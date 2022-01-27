@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { TagCard } from "./TagCard"
 import { getAllTags } from "../../modules/tagManager";
 import { useHistory } from "react-router-dom";
+import './Tag.css'
 
 export const TagList = () => {
     const [tags, setTags] = useState([]);
