@@ -10,15 +10,17 @@ import {
 } from 'reactstrap';
 import { logout } from './modules/authManager';
 import "./Header.css"
+import logo from "./Images/Logo.png"
 
 export default function Header({ isLoggedIn }) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
         <div>
-            <Navbar color="light" light expand="md">
+            <Navbar >
+                <img className="logo_navbar" src={logo} alt="logo"></img>
                 <NavbarBrand className='Title'>Ryans World</NavbarBrand>
-
+                <span></span>
                 <Nav className="mr-auto" navbar>
                     { /* When isLoggedIn === true, we will render the Home link */}
                     {isLoggedIn &&
