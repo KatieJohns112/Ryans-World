@@ -22,7 +22,8 @@ namespace Ryans_World.Repositories
                         cmd.CommandText = @"
                         SELECT up.Id, up.FireBaseUserId, up.FirstName, up.LastName, up.DisplayName, 
                                up.Email, up.ImageLocation
-                         WHERE up.FireBaseUserId = @FireBaseUserId";
+                        FROM UserProfile up
+                        WHERE up.FireBaseUserId = @FireBaseUserId";
 
                         DbUtils.AddParameter(cmd, "@FireBaseUserId", firebaseUserId);
 
