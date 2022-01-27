@@ -1,0 +1,33 @@
+.nav_items {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    list-style: none;
+    background-color: rgb(78, 191, 206);
+    margin-top: 1cm;
+    margin-bottom: 3cm;
+    padding-top: .5cm;
+    padding-bottom: .5cm;
+    padding-left: 1cm;
+}
+
+.nav_item {
+    color: white;
+    font-size: .7cm;
+}
+
+.mr-auto {
+    background-color: rgb(78, 191, 206);
+}
+
+.nav_item_logout {
+    color: rgb(104, 98, 98);
+    font-size: .7cm;
+}
+
+.Title {
+    font-size: 2cm;
+    display: flex;
+    justify-content: center;
+}
+

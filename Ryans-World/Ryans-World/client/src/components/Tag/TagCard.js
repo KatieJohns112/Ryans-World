@@ -1,5 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
+import './Tag.css'
 
 export const TagCard = ({ tag }) => {
     const history = useHistory();
@@ -16,13 +17,13 @@ export const TagCard = ({ tag }) => {
         <div classsName="TagBox">
             <div className="TagCard">
                 <p>Name : {tag.name}</p>
+                <button className="DeleteTag"
+                    type="button" onClick={() => handleDeleteTag(tag.id)}>
+                    Delete Tag</button>
+                <button className="DeleteTag"
+                    type="button" onClick={() => handleUpdateTag(tag.id)}>
+                    Update</button>
             </div>
-            <button className="DeleteTag"
-                type="button" onClick={() => handleDeleteTag(tag.id)}>
-                Delete Tag</button>
-            <button className="DeleteTag"
-                type="button" onClick={() => handleUpdateTag(tag.id)}>
-                Update</button>
         </div>
     )
 }
