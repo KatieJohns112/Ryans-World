@@ -1,6 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
 .TagCard{
-    background-color: white;
-    margin-top: 1cm;
-    margin-bottom: 1cm;;
+    background-color: whitesmoke;
+    font-family: Architects Daughter, sans-serif;
+    font-size: 20px;
+}
+
+.TagList {
+    display:  flex;
+    flex-flow: column;
+    justify-content: center;
+    margin-left: 10%;
+    margin-right: 4%;
+}
+
+.TagContent {
+    background-color: whitesmoke;
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 9%;
+    width: 50%;
+    border-style: solid;
+    border-color: black;
+    border-width: 5%;
+}
+
+.TagListName {
+    font-family: Architects Daughter, sans-serif;
+    font-size: 1cm;
+    font-weight: bold;
+    margin-left: 10%;
+    padding-top: 2%;
+}
+
+.NewTagButton {
+    margin-bottom: 1cm;
+    margin-left: 25%;
+    background-color: rgb(71, 161, 177);
+    border-radius: 15px;
+    border-style: solid;
+    border-color: black;
+    border-width: 5%;
+    font-size: .5cm;
+}
+
+.TagButtons {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-left: 12cm;
+    margin-bottom: 1cm;
+    margin-top:-1.3cm
+}
+
+.CreateNewTag {
+    margin-top: .3cm;
+    margin-bottom: .3cm;
+    margin-left: .3cm;
+    margin-right: .3cm;
+    font-family: Architects Daughter, sans-serif;
+}
+
+.UpdateTag {
+    background-color: rgb(71, 161, 177);
+    border-radius: 15px;
+    border-style: solid;
+    border-color: rgb(71, 161, 177);
+}
+
+.UpdateTag:hover {
+    background-color: rgb(33, 111, 124);
+}
+
+.DeleteTag {
+    background-color: rgb(190, 102, 102);
+    border-radius: 15px;
+    border-style: solid;
+    margin-right: 30px;
+    border-color: rgb(190, 102, 102);
+}
+
+.DeleteTag:hover {
+    background-color: rgb(141, 65, 65);
+}
+
+.NameDeleteTag {
+    margin-top: .1cm;
+    margin-bottom: .1cm;
+    margin-left: .3cm;
+    margin-right: .3cm;
+    font-family: Architects Daughter, sans-serif;
+}
+
+.NameUpdateTag {
+    margin-top: .1cm;
+    margin-bottom: .1cm;
+    margin-left: .3cm;
+    margin-right: .3cm;
+    font-family: Architects Daughter, sans-serif;
+}
+
+.NewTagHeader {
+    display: flex;
+    justify-content: center;
+    font-family: Architects Daughter, sans-serif;
+    font-size: 30px;
 }
 

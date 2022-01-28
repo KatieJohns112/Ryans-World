@@ -14,16 +14,16 @@ export const TagCard = ({ tag }) => {
     };
 
     return (
-        <div classsName="TagBox">
-            <div className="TagCard">
-                <p>Name : {tag.name}</p>
-                <button className="DeleteTag"
+        <div className="TagCard">
+            <p>Name : {tag.name}</p>
+            <ul className="TagButtons">
+                <li><button className="DeleteTag"
                     type="button" onClick={() => handleDeleteTag(tag.id)}>
-                    Delete Tag</button>
-                <button className="DeleteTag"
+                    <p className="NameDeleteTag">Delete Tag</p></button></li>
+                <li><button className="UpdateTag"
                     type="button" onClick={() => handleUpdateTag(tag.id)}>
-                    Update</button>
-            </div>
+                    <p className="NameUpdateTag">Update</p></button></li>
+            </ul>
         </div>
     )
 }
