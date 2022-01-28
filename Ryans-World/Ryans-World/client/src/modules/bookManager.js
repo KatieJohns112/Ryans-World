@@ -1,6 +1,6 @@
 import { getToken } from "./authManager";
 
-const baseUrl = "api/book";
+const baseUrl = "/api/book";
 
 export const getAllBooks = () => {
     return getToken().then(token => {
@@ -34,6 +34,19 @@ export const addBook = (newBook) => {
             } else {
                 throw new Error("An error occured when creating a new book")
             }
+        })
+    })
+}
+
+export const deleteBook = (id) => {
+    console.log(baseUrl + `${id}`)
+    return getToken().then(token => {
+        return fetch(`${baseUrl}/${id}`, {
+            method: "DELETE",
+            headers: {
+                Authorization: `Bearer ${token}`,
+                "Content-Type": "application/json",
+            },
         })
     })
 }

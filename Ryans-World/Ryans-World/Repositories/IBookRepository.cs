@@ -10,5 +10,6 @@ namespace Ryans_World.Repositories
     {
         List<Book> GetAll();
         void Add(Book book);
+        void Delete(int bookId);
     }
 }
