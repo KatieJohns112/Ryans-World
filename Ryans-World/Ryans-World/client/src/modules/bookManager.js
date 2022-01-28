@@ -50,3 +50,23 @@ export const deleteBook = (id) => {
         })
     })
 }
+
+export const updateBook = (book) => {
+    console.log(book);
+    return fetch(baseUrl, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(book)
+    })
+}
+
+export const getBook = (id) => {
+    return fetch(`${baseUrl}/${id}`, {
+        method: "GET",
+        headers: {
+            "Content-Type": "application.json"
+        },
+    }).then((res) => res.json());
+}
