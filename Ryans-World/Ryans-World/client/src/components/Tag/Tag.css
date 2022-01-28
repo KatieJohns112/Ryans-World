@@ -50,7 +50,7 @@
     list-style: none;
     margin-left: 12cm;
     margin-bottom: 1cm;
-    margin-top:-1cm
+    margin-top:-1.3cm
 }
 
 .CreateNewTag {
@@ -100,8 +100,10 @@
     font-family: Architects Daughter, sans-serif;
 }
 
-.Middle {
-    margin-left: 8cm;
-    margin-bottom: 1cm;
-    margin-top:-1cm
+.NewTagHeader {
+    display: flex;
+    justify-content: center;
+    font-family: Architects Daughter, sans-serif;
+    font-size: 30px;
 }
+
