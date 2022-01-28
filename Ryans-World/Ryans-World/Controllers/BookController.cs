@@ -41,6 +41,13 @@ namespace Ryans_World.Controllers
             return CreatedAtAction("Get", new { id = book.Id }, book);
         }
 
+        [HttpDelete("{id}")]
+        public IActionResult DeleteBook(int id)
+        {
+            _bookRepository.Delete(id);
+            return NoContent();
+        }
+
         private UserProfile GetCurrentUserProfile()
         {
             var fireBaseUserId = User.FindFirst(ClaimTypes.NameIdentifier).Value;
