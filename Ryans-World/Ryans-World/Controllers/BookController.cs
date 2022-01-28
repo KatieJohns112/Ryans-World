@@ -48,6 +48,20 @@ namespace Ryans_World.Controllers
             return NoContent();
         }
 
+        [HttpPut]
+        public IActionResult Put(Book book)
+        {
+            _bookRepository.Update(book);
+            return NoContent();
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult Index(int id)
+        {
+            var book = _bookRepository.GetBookById(id);
+            return Ok(book);
+        }
+
         private UserProfile GetCurrentUserProfile()
         {
             var fireBaseUserId = User.FindFirst(ClaimTypes.NameIdentifier).Value;

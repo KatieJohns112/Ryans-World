@@ -109,5 +109,77 @@ namespace Ryans_World.Repositories
                 }
             }
         }
+
+        public Book GetBookById(int id)
+        {
+            using (var conn = Connection)
+            {
+                conn.Open();
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = @"SELECT b.Id, b.Title, b.Author, b.DayOfWeek, b.FavoriteScale,
+                                        b.ImageLocation, b.UserProfileId, b.CategoryId, up.DisplayName
+                                        FROM Book b
+                                        JOIN UserProfile up on b.UserProfileId = up.Id
+                                        WHERE b.Id = @Id";
+                    DbUtils.AddParameter(cmd, "@Id", id);
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        Book book = null;
+                        if(reader.Read())
+                        {
+                            book = new Book()
+                            {
+                                Id = id,
+                                Title = DbUtils.GetString(reader, "Title"),
+                                Author = DbUtils.GetString(reader, "Author"),
+                                DayOfWeek = DbUtils.GetString(reader, "DayOfWeek"),
+                                FavoriteScale = DbUtils.GetInt(reader, "FavoriteScale"),
+                                ImageLocation = DbUtils.GetString(reader, "ImageLocation"),
+                                UserProfileId = DbUtils.GetInt(reader, "UserProfileId"),
+                                CategoryId = DbUtils.GetInt(reader, "CategoryId"),
+                                UserProfile = new UserProfile()
+                                {
+                                    DisplayName = DbUtils.GetString(reader, "DisplayName")
+                                }
+                            };
+                        }
+                        return book;
+                    }
+                }
+            }
+        }
+
+        public void Update(Book book)
+        {
+            using (var conn = Connection)
+            {
+                conn.Open();
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = @"UPDATE Book
+                                        SET Title = @title,
+                                            Author = @author,
+                                            DayOfWeek = @dayOfWeek,
+                                            FavoriteScale = @favoriteScale,
+                                            ImageLocation = @imageLocation,
+                                            CategoryId = @categoryId,
+                                            UserProfileId = @userProfileId
+                                        WHERE id = @id";
+
+                    cmd.Parameters.AddWithValue("@title", book.Title);
+                    cmd.Parameters.AddWithValue("@author", book.Author);
+                    cmd.Parameters.AddWithValue("@dayOfWeek", book.DayOfWeek);
+                    cmd.Parameters.AddWithValue("@favoriteScale", book.FavoriteScale);
+                    cmd.Parameters.AddWithValue("@imageLocation", book.ImageLocation);
+                    cmd.Parameters.AddWithValue("@categoryId", book.CategoryId);
+                    cmd.Parameters.AddWithValue("@userProfileId", book.UserProfileId);
+                    cmd.Parameters.AddWithValue("@id", book.Id);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
     }
 }

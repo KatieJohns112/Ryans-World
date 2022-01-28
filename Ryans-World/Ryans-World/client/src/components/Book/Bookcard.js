@@ -9,6 +9,10 @@ export const BookCard = ({ book }) => {
         history.push(`/deleteBook/${book.id}`)
     };
 
+    const handleUpdateBook = () => {
+        history.push(`/editBook/${book.id}`);
+    };
+
     return (
         <div className="BookBox">
             <div className="BookImage">
@@ -24,6 +28,9 @@ export const BookCard = ({ book }) => {
                     <li><button className="DeleteBook"
                         type="button" onClick={() => handleDeleteBook(book.id)}>
                         <p className="NameDeleteBook">Delete Book</p></button></li>
+                    <li><button className="UpdateBook"
+                        type="button" onClick={() => handleUpdateBook(book.id)}>
+                        <p className="NameUpdateBook">Update</p></button></li>
                 </ul>
             </div>
         </div>
