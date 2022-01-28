@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 
 .TagCard{
-    background-color: whitesmoke;
+    background-color: rgb(216, 215, 215);
     font-family: Architects Daughter, sans-serif;
     font-size: 20px;
+}
+
+.TagName {
+    font-weight: bold;
 }
 
 .TagList {
@@ -15,7 +19,7 @@
 }
 
 .TagContent {
-    background-color: whitesmoke;
+    background-color: rgb(216, 215, 215);
     margin-left: 25%;
     margin-right: 25%;
     border-radius: 10px;
@@ -47,6 +51,7 @@
 .TagButtons {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     list-style: none;
     margin-left: 12cm;
     margin-bottom: 1cm;
@@ -66,6 +71,8 @@
     border-radius: 15px;
     border-style: solid;
     border-color: rgb(71, 161, 177);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .UpdateTag:hover {
@@ -76,19 +83,44 @@
     background-color: rgb(190, 102, 102);
     border-radius: 15px;
     border-style: solid;
-    margin-right: 30px;
     border-color: rgb(190, 102, 102);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-right:.2cm;
 }
 
 .DeleteTag:hover {
     background-color: rgb(141, 65, 65);
 }
 
-.NameDeleteTag {
+.NameDetailsTag {
     margin-top: .1cm;
     margin-bottom: .1cm;
     margin-left: .3cm;
     margin-right: .3cm;
+    font-family: Architects Daughter, sans-serif;
+}
+
+.DetailTag {
+    background-color: rgb(228, 135, 30);
+    border-radius: 15px;
+    border-style: solid;
+    margin-right: 30px;
+    border-color: rgb(228, 135, 30);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-left:.2cm;
+}
+
+.DetailTag:hover {
+    background-color: #aa6a20;
+}
+
+.NameDeleteTag {
+    margin-top: .1cm;
+    margin-bottom: .1cm;
+    margin-left: .4cm;
+    margin-right: .4cm;;
     font-family: Architects Daughter, sans-serif;
 }
 
@@ -105,5 +137,10 @@
     justify-content: center;
     font-family: Architects Daughter, sans-serif;
     font-size: 30px;
+}
+
+.Middle {
+    margin-left: 10cm;
+    margin-top: -.9cm
 }
 

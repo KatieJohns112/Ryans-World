@@ -5,7 +5,7 @@
     flex-wrap: nowrap;
     justify-content: space-evenly;
     list-style: none;
-    background-color: rgb(78, 191, 206);
+    background-color: rgb(47, 151, 165);
     margin-bottom: 1cm;
     padding-top: .5cm;
     padding-bottom: .5cm;
@@ -18,8 +18,15 @@
     font-family: Architects Daughter, sans-serif;
 }
 
+.nav_item:hover {
+   background-color: rgb(216, 215, 215);
+   border-radius: 9px;
+   margin-left: .5cm;
+   margin-right: .5cm;
+}
+
 .mr-auto {
-    background-color: rgb(78, 191, 206);
+    background-color: rgb(47, 151, 165);
 }
 
 .nav_item_logout {
