@@ -27,19 +27,19 @@ export const TagForm = () => {
 
     return (
         <>
-            <form className="TagForm">
-                <h3 className="NewTagHeader">Create a new tag</h3>
-                <fieldset className="NewTagName">
-                    <div className="form_group">
-                        <label htmlFor="name">Tag name : </label>
-                        <input type="text" id="name" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Tag name" value={tag.name} />
-                    </div>
-                </fieldset>
+            <h3 className="NewTagHeader">Create a new Tag</h3>
+            <div className="MainTagForm">
+                <form className="TagForm">
+                    <fieldset className="NewTagName">
+                        <div className="form_group">
+                            <label htmlFor="name">Tag name : </label>
+                            <input type="text" id="name" onChange={handleControlledInputChange} required autoFocus className="form-control" value={tag.name} />
+                        </div>
+                    </fieldset>
+                </form>
                 <button className="SaveTagButton"
-                    onClick={handleClickSaveTag}>
-                    Save
-                </button>
-            </form>
+                    onClick={handleClickSaveTag}><p className="SaveNewTag">Save</p></button>
+            </div>
         </>
     )
 };

@@ -19,9 +19,8 @@ export const DeleteTag = () => {
     };
 
     return (
-        <form>
-            <h2> Delete Tag:</h2>
-            <p>Are you sure you want to delete this tag?</p>
+        <form className="DeleteTagForm">
+            <p className="Text">Are you sure you want to delete this tag?</p>
             <button onClick={handleConfirmDeleteTag}>Delete</button>
             <button onClick={() => history.push("/tag")}>Cancel</button>
         </form>
