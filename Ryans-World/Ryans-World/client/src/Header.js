@@ -18,8 +18,6 @@ export default function Header({ isLoggedIn }) {
     return (
         <div>
             <Navbar >
-                <img className="logo_navbar" src={logo} alt="logo"></img>
-                <NavbarBrand className='Title'>Ryans World</NavbarBrand>
                 <span></span>
                 <Nav className="mr-auto" navbar>
                     { /* When isLoggedIn === true, we will render the Home link */}
@@ -27,6 +25,8 @@ export default function Header({ isLoggedIn }) {
                         <>
 
                             <ul className='nav_items'>
+                                <li><img className="logo_navbar" src={logo} alt="logo"></img> </li>
+                                <li><NavbarBrand className='Title'>Ryans World</NavbarBrand></li>
                                 <li className='nav_item'>
                                     <NavLink className='nav_item' tag={RRNavLink} to="/">Home</NavLink>
                                 </li>

@@ -6,7 +6,6 @@
     justify-content: space-evenly;
     list-style: none;
     background-color: rgb(47, 151, 165);
-    margin-bottom: 1cm;
     padding-top: .5cm;
     padding-bottom: .5cm;
     padding-left: 1cm;
@@ -19,14 +18,13 @@
 }
 
 .nav_item:hover {
-   background-color: rgb(216, 215, 215);
-   border-radius: 9px;
-   margin-left: .5cm;
-   margin-right: .5cm;
+ color: whitesmoke;
 }
 
 .mr-auto {
     background-color: rgb(47, 151, 165);
+    border-style: solid;
+    border-color: black;
 }
 
 .nav_item_logout {
@@ -35,10 +33,10 @@
 }
 
 .Title {
-    font-size: 2cm;
-    display: flex;
-    justify-content: center;
-    font-family: Architects Daughter, sans-serif;
+  font-family: Architects Daughter, sans-serif;
+  font-size: .7cm;
+  color: whitesmoke;
+  margin-left: -4cm
 }
 
 div.container-fluid {
@@ -46,13 +44,7 @@ div.container-fluid {
 }
 
 .logo_navbar {
-    height: 100px;
-    margin-bottom: -2.5cm;
-    padding-left: 12cm;
-
+    height: 50px;
+    margin-top:-.2cm;
+    margin-left: -3cm;
 }
-
-
-
-
-
