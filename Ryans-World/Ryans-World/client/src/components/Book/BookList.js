@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import BookCard from "./Bookcard";
 import { getAllBooks } from "../../modules/bookManager";
 import { useHistory } from "react-router-dom";
+import './Book.css'
 
 export const BookList = () => {
     const [books, setBooks] = useState([]);
@@ -21,10 +22,9 @@ export const BookList = () => {
     return (
         <>
             <div className="NewBook">
-                <button type="button"
-                    className="NewBookButton"
+                <button type="button" className="NewBookButton"
                     onClick={() => { history.push("/createBook"); }}>
-                    Create new Book
+                    <p className="CreateNewBook"> Create new Book</p>
                 </button>
             </div>
             <div>
