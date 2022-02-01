@@ -12,6 +12,8 @@ export const BookTagForm = () => {
     const [tags, setTags] = useState([]);
     const [book, setBook] = useState(null);
     const [activeTagIds, setActiveTagIds] = useState([]);
+    const [selectedTags, setSelectedTags] = useState([]);
+    const [checked, setChecked] = useState(false);
 
     const history = useHistory();
 
@@ -23,50 +25,48 @@ export const BookTagForm = () => {
         getBook(id).then(setBook);
     }, []);
 
-    const handleSelectedTags = (event) => {
+    const handleChange = (event) => {
+        console.log(event.target.value);
+        const newTagList = [...selectedTags]
+        newTagList.push(event.target.value)
+        console.log(newTagList);
+        setSelectedTags(newTagList);
+    };
+
+    const handleClickSaveBookTag = (event) => {
         event.preventDefault();
-        const newId = parseInt(event.target.id.split("--")[1]);
 
-        const activeTagIdCopy = [...activeTagIds];
-
-        if (activeTagIdCopy.includes(newId)) {
-            setActiveTagIds([
-                ...activeTagIdCopy.filter((tag) => tag != newId),
-            ]);
-        } else {
-            activeTagIdCopy.push(newId);
-            setActiveTagIds(activeTagIdCopy);
-        }
+        selectedTags.map(t => {
+            var BookTag = {
+                BookId: book.id,
+                TagId: t
+            }
+            addBookTag(BookTag)
+        })
+        history.push("/book")
     }
+
     if (!book) {
         return null;
     }
+
     return (
         <>
-            {/* <form className="AddTagToBook">
-                <fieldset className="BookTagFieldset">
-                    <div className="form-group">
-                        <label htmlFor="tag">What tags would you like to add to this book?</label>
-                        <select value={book.bookTag.name} name="tagId" id="tagId" onChange={handleControlledInputChange} className="form-control" >
-                            <option value="0">Select tags</option>
-                            {tags.map(l => (
-                                <option key={l.id} value={l.id}>
-                                    {l.name}
-
-                                </option>
-                            ))}
-                        </select>
-                    </div>
-                </fieldset>
-                <button className="SaveBookTagButton"
+            <div className="multiselector">
+                <div className="selectfield">
+                    <label htmlFor="tags">Please select Tag(s)</label>
+                    {tags.map(t => (
+                        <>
+                            <input type="checkbox" onChange={handleChange} key={t.id} value={t.id} />
+                            <p>{t.name}</p>
+                        </>
+                    ))}
+                </div>
+                <button className="save-booktag-button"
                     onClick={handleClickSaveBookTag}>
-                    Save
+                    Save Tags
                 </button>
-            </form> */}
-            <p>{book.title}</p>
-            {bookTags.map(t => <p>{t.name}</p>)}
-            {tags.map(t => <p>{t.name}</p>)}
-
+            </div>
         </>
     )
 }

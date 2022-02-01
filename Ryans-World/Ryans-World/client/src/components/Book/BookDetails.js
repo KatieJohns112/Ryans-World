@@ -7,6 +7,7 @@ import { Button } from "reactstrap";
 export const Book = () => {
     const history = useHistory();
     const [book, setBook] = useState([]);
+    const [tags, setTags] = useState([]);
 
     const { id } = useParams();
 
@@ -35,8 +36,8 @@ export const Book = () => {
             <p>{book.favoriteScale}</p>
             <h4>Tags</h4>
             <ul>
-                {book.tags != null
-                    ? book.tags.map((t) => <li>{t.name}</li>)
+                {tags != null
+                    ? tags.map((t) => <li>{t.name}</li>)
                     : null}
             </ul>
             <Button
