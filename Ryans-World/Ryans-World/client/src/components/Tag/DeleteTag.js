@@ -21,8 +21,10 @@ export const DeleteTag = () => {
     return (
         <form className="DeleteTagForm">
             <p className="Text">Are you sure you want to delete this tag?</p>
-            <button onClick={handleConfirmDeleteTag}>Delete</button>
-            <button onClick={() => history.push("/tag")}>Cancel</button>
+            <ul className="DeleteTagButtons">
+                <li><button className="ConfirmDeleteTag" onClick={handleConfirmDeleteTag}><p className="TagDelete">Delete</p></button></li>
+                <li><button className="ConfirmCancelTag" onClick={() => history.push("/tag")}><p className="TagCancel">Cancel</p></button></li>
+            </ul>
         </form>
     );
 };

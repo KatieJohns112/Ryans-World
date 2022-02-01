@@ -33,10 +33,11 @@ export const TagUpdateForm = () => {
     };
     return (
         <>
-            <form>
-                <div>
-                    <h3>Edit Tag</h3>
-                    <label className="EditTagName" htmlFor="name">Tag name :</label> <input
+            <h3 className="EditTagHeader">Edit Tag</h3>
+            <form className="UpdateTagForm">
+                <div className="UpdateTagName">
+                    <label className="EditTagName" htmlFor="name">Tag name :</label>
+                    <input
                         type="text"
                         required
                         className="form-control"
