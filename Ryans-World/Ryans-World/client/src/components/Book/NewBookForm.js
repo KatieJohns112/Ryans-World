@@ -33,8 +33,8 @@ export const BookForm = () => {
 
     return (
         <>
+            <h3 className="NewBookHeader">Create a new Book</h3>
             <form className="BookForm">
-                <h3 className="NewBookHeader">Create a new Book</h3>
                 <fieldset className="NewBook">
                     <div className="form_group">
                         <label htmlFor="title">Title: </label>
