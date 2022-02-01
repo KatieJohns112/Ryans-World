@@ -233,5 +233,91 @@
     border-radius: 15px;
     border-style: solid;
     border-color: black;
-    border-width: 1px;
+    border-width: 2px;
+}
+
+.DeleteTagButtons {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2cm;
+    list-style: none;
+    margin-bottom: -1cm;
+}
+
+.ConfirmCancelTag {
+    background-color: rgb(228, 135, 30);
+    border-radius: 15px;
+    border-style: solid;
+    margin-right: 30px;
+    border-color: rgb(228, 135, 30);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-left:.2cm;
+}
+
+.ConfirmCancelTag:hover {
+    background-color: #aa6a20;
+}
+
+.ConfirmDeleteTag {
+    background-color: rgb(190, 102, 102);
+    border-radius: 15px;
+    border-style: solid;
+    border-color: rgb(190, 102, 102);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-right:.2cm;
+}
+
+.ConfirmDeleteTag:hover {
+    background-color: rgb(141, 65, 65);
+}
+
+.TagDelete {
+    margin-top: .1cm;
+    margin-bottom: .1cm;
+    margin-left: .3cm;
+    margin-right: .3cm;
+    font-family: Architects Daughter, sans-serif;
+}
+
+.TagCancel {
+    margin-top: .1cm;
+    margin-bottom: .1cm;
+    margin-left: .3cm;
+    margin-right: .3cm;
+    font-family: Architects Daughter, sans-serif;
+}
+
+/* //// Delete Tag CSS //// */
+
+.UpdateTagForm {
+    background-color:rgb(216, 215, 215);
+    padding-top: 2cm;
+    padding-bottom: 2cm;
+    margin-top: 3cm;
+    margin-left: 12cm;
+    margin-right: 12cm;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+}
+
+.EditTagHeader {
+    display: flex;
+    justify-content: center;
+    font-family: Architects Daughter, sans sans-serif;
+    margin-top: 1cm;
+    margin-bottom: -2cm;
+    font-size: .8cm;
+}
+
+.UpdateTagName {
+    font-family: Architects Daughter, sans-serif;
+    font-size: 20px;
+    border-style: solid;
+    border-color: rgb(216, 215, 215);
+    display: flex;
+    justify-content: center;
 }
