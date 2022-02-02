@@ -3,11 +3,14 @@ import { useParams } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import { getBook } from "../../modules/bookManager";
 import { Button } from "reactstrap";
+import { getTag } from "../../modules/tagManager";
+import { getBookTagsByBookId } from "../../modules/bookTagManager";
 
 export const Book = () => {
     const history = useHistory();
     const [book, setBook] = useState([]);
     const [tags, setTags] = useState([]);
+    const [bookTags, setBookTags] = useState([]);
 
     const { id } = useParams();
 
@@ -17,9 +20,18 @@ export const Book = () => {
         });
     };
 
+    const getTagsByBookId = () => {
+        getBookTagsByBookId(id).then((tags) => {
+            setBookTags(tags);
+        })
+    }
+
     useEffect(() => {
         getBooks();
+        getTagsByBookId();
     }, []);
+    console.log(bookTags);
+
 
     return (
         <div>
@@ -36,8 +48,8 @@ export const Book = () => {
             <p>{book.favoriteScale}</p>
             <h4>Tags</h4>
             <ul>
-                {tags != null
-                    ? tags.map((t) => <li>{t.name}</li>)
+                {bookTags != null
+                    ? bookTags.map((t) => <li>{t.tag.name}</li>)
                     : null}
             </ul>
             <Button

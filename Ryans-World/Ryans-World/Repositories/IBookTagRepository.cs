@@ -8,5 +8,6 @@ namespace Ryans_World.Repositories
         void Add(BookTag bookTag);
         List<BookTag> GetBookTagsByBookId(int id);
         BookTag GetById(int id);
+        void Delete(int id);
     }
 }

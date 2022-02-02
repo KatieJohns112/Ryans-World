@@ -31,3 +31,4 @@ export const getBookTagsByBookId = (bookId) => {
         },
     }).then((res) => res.json());
 };
+
