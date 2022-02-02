@@ -45,20 +45,22 @@ export const TagUpdateForm = () => {
                         id="name"
                         value={tag.name} />
                 </div>
-                <div className="alignRight">
+                <div className="UpdateButtons">
+                    <div className="alignRight">
+                        <button
+                            type="EditTagButton"
+                            onClick={handleConfirm}
+                            className="submit_tag_button"
+                        ><p className="saveUpdatedTag">Save</p></button>
+                    </div>
                     <button
-                        type="EditTagButton"
-                        onClick={handleConfirm}
-                        className="submit_tag_button"
-                    >Save</button>
+                        className="cancel_tag_button"
+                        variant="secondary"
+                        onClick={() => history.push("/tag")}
+                    >
+                        <p className="cancelUpdatedTag">Cancel</p>
+                    </button>
                 </div>
-                <button
-                    className="EditTagButton"
-                    variant="secondary"
-                    onClick={() => history.push("/tag")}
-                >
-                    Cancel
-                </button>
             </form>
         </>
     );

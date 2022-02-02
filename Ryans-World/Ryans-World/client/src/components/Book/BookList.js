@@ -21,7 +21,7 @@ export const BookList = () => {
 
     return (
         <>
-            <div className="NewBook">
+            <div >
                 <button type="button" className="NewBookButton"
                     onClick={() => { history.push("/createBook"); }}>
                     <p className="CreateNewBook"> Create new Book</p>

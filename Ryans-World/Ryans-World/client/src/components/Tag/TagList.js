@@ -29,11 +29,12 @@ export const TagList = () => {
                 </button>
             </div>
             <div>
-                <div></div>
-                <div className="TagContent">
-                    <div className="TagListName">Tag List :</div>
-                    <div className="TagList">
-                        {tags.map(tag => <TagCard key={tag.id} tag={tag} />)}
+                <div className="MainTag">
+                    <div className="TagContent">
+                        <div className="TagListName">Tag List :</div>
+                        <div className="TagList">
+                            {tags.map(tag => <TagCard key={tag.id} tag={tag} />)}
+                        </div>
                     </div>
                 </div>
             </div>
