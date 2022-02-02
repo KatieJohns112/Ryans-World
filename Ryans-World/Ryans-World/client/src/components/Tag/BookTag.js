@@ -11,7 +11,6 @@ export const BookTagForm = () => {
     const [bookTags, setBookTags] = useState([]);
     const [tags, setTags] = useState([]);
     const [book, setBook] = useState(null);
-    const [activeTagIds, setActiveTagIds] = useState([]);
     const [selectedTags, setSelectedTags] = useState([]);
     const [checked, setChecked] = useState(false);
 

@@ -44,5 +44,12 @@ namespace Ryans_World.Controllers
             _bookTagRepository.Add(bookTag);
             return NoContent();
         }
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            _bookTagRepository.Delete(id);
+            return NoContent();
+        }
     }
 }
