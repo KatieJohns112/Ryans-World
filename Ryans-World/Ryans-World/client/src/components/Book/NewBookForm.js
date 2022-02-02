@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import { addBook } from "../../modules/bookManager";
 import { useEffect } from "react";
 import { addTag } from "../../modules/tagManager";
+import "./Book.css"
 
 export const BookForm = () => {
     const [book, setBook] = useState({
@@ -34,52 +35,54 @@ export const BookForm = () => {
     return (
         <>
             <h3 className="NewBookHeader">Create a new Book</h3>
-            <form className="BookForm">
-                <fieldset className="NewBook">
-                    <div className="form_group">
-                        <label htmlFor="title">Title: </label>
-                        <input type="text" id="title"
-                            onChange={handleControlledInputChange} required autoFocus className="form-control"
-                            placeholder="Book name" value={book.title} />
-                    </div>
-                </fieldset>
-                <fieldset className="NewBook">
-                    <div className="form_group">
-                        <label htmlFor="author">Author: </label>
-                        <input type="text" id="author"
-                            onChange={handleControlledInputChange} required autoFocus className="form-control"
-                            placeholder="Author name" value={book.author} />
-                    </div>
-                </fieldset>
-                <fieldset className="NewBook">
-                    <div className="form_group">
-                        <label htmlFor="dayOfWeek">Day of week to read: </label>
-                        <input type="text" id="dayOfWeek"
-                            onChange={handleControlledInputChange} required autoFocus className="form-control"
-                            placeholder="What day are you reading this book" value={book.dayOfWeek} />
-                    </div>
-                </fieldset>
-                <fieldset className="NewBook">
-                    <div className="form_group">
-                        <label htmlFor="favoriteScale">Favorite Scale (1 -10): </label>
-                        <input type="text" id="favoriteScale"
-                            onChange={handleControlledInputChange} required autoFocus className="form-control"
-                            placeholder="On a scale of 1 - 10 what number is this book" value={book.favoriteScale} />
-                    </div>
-                </fieldset>
-                <fieldset className="NewBook">
-                    <div className="form_group">
-                        <label htmlFor="imageLocation">Url Image of book cover: </label>
-                        <input type="text" id="imageLocation"
-                            onChange={handleControlledInputChange} required autoFocus className="form-control"
-                            placeholder="Tag name" value={book.imageLocation} />
-                    </div>
-                </fieldset>
-                <button className="SaveBookButton"
-                    onClick={handleClickSaveBook}>
-                    Save
-                </button>
-            </form>
+            <div className="MainBookForm">
+                <form className="BookForm">
+                    <fieldset className="NewBook">
+                        <div className="form_group">
+                            <label htmlFor="title">Title: </label>
+                            <input type="text" id="title"
+                                onChange={handleControlledInputChange} required autoFocus className="form-control"
+                                placeholder="Book name" value={book.title} />
+                        </div>
+                    </fieldset>
+                    <fieldset className="NewBook">
+                        <div className="form_group">
+                            <label htmlFor="author">Author: </label>
+                            <input type="text" id="author"
+                                onChange={handleControlledInputChange} required autoFocus className="form-control"
+                                placeholder="Author name" value={book.author} />
+                        </div>
+                    </fieldset>
+                    <fieldset className="NewBook">
+                        <div className="form_group">
+                            <label htmlFor="dayOfWeek">Day of week to read: </label>
+                            <input type="text" id="dayOfWeek"
+                                onChange={handleControlledInputChange} required autoFocus className="form-control"
+                                placeholder="What day are you reading this book" value={book.dayOfWeek} />
+                        </div>
+                    </fieldset>
+                    <fieldset className="NewBook">
+                        <div className="form_group">
+                            <label htmlFor="favoriteScale">Favorite Scale (1 -10): </label>
+                            <input type="text" id="favoriteScale"
+                                onChange={handleControlledInputChange} required autoFocus className="form-control"
+                                placeholder="On a scale of 1 - 10 what number is this book" value={book.favoriteScale} />
+                        </div>
+                    </fieldset>
+                    <fieldset className="NewBook">
+                        <div className="form_group">
+                            <label htmlFor="imageLocation">Url Image of book cover: </label>
+                            <input type="text" id="imageLocation"
+                                onChange={handleControlledInputChange} required autoFocus className="form-control"
+                                placeholder="Tag name" value={book.imageLocation} />
+                        </div>
+                    </fieldset>
+                    <button className="SaveBookButton"
+                        onClick={handleClickSaveBook}>
+                        <p className="SaveUpdatedBook">Save</p>
+                    </button>
+                </form>
+            </div>
         </>
     )
 }
