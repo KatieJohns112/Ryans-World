@@ -37,7 +37,7 @@
 
 .NewTagButton {
     margin-bottom: 1cm;
-    margin-left: 25%;
+    margin-left: 415px;
     background-color: rgb(71, 161, 177);
     border-radius: 15px;
     border-style: solid;
@@ -301,7 +301,7 @@
     border-radius: 15px;
     border-style: solid;
     border-color: black;
-    border-width: 2px;
+    border-width: 1px;
 }
 
 .EditTagHeader {
@@ -339,6 +339,7 @@
 
 .EditTagName {
     margin-top: 5px;
+    font-size: 22px;
 }
 
 .submit_tag_button {
@@ -394,4 +395,12 @@
     list-style: none;
     margin-bottom: -1cm;
     margin-top: 1cm;
+}
+
+.EditBookHeader {
+    display: flex;
+    justify-content: center;
+    margin-top: 1cm;
+    font-family: Architects Daughter, sans-serif;
+    font-size: .8cm;
 }

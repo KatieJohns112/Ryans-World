@@ -2,7 +2,7 @@
 
 .NewBookButton {
     margin-bottom: 1cm;
-    margin-left: 50px;
+    margin-left: 290px;
     background-color: rgb(71, 161, 177);
     border-radius: 15px;
     border-style: solid;
@@ -73,7 +73,7 @@
     box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),0px 4px 4px rgba(0, 0, 0, 0.25); 
     margin-left: 1em;
-    margin-right:1em;
+    margin-right: 1em;
 }
 
 .DetailBook {
@@ -86,22 +86,28 @@
 }
 
 .NameDeleteBook {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: .1cm;
+    margin-bottom: .1cm;
+    margin-left: .3cm;
+    margin-right: .3cm;
     font-family: Architects Daughter, san;
     font-weight: bold;
 }
 
 .NameUpdateBook {
-    margin-top: 10px;
-    margin-bottom: 10px;
     font-family: Architects Daughter, san;
+    margin-top: .1cm;
+    margin-bottom: .1cm;
+    margin-left: .3cm;
+    margin-right: .3cm;
 }
 
 .NameDetailBook {
-    margin-top: 10px;
-    margin-bottom: 10px;
     font-family: Architects Daughter, san;
+    margin-top: .1cm;
+    margin-bottom: .1cm;
+    margin-left: .3cm;
+    margin-right: .3cm;
 }
 
 .UpdateBook:hover {
@@ -209,3 +215,84 @@
 .SaveBookButton:hover {
     background-color:  #aa6a20;
 }
+
+.EditBookForm {
+    margin-left: 12cm;
+    background-color: rgb(216, 215, 215);
+    margin-right: 12cm;
+    padding-top: 1cm;
+    padding-bottom: 1cm;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    border-radius: 15px;
+    margin-top: 3em;
+}
+
+.UpdateBookCharacter {
+    margin-left: 5cm;
+    padding-top: .4cm;
+    font-family: Architects Daughter, sans-serif;
+    font-size: 22px;
+}
+
+.MainUpdateBook {
+    margin-top: 1cm;
+}
+
+.UpdateBookButtons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1cm;
+}
+
+.SaveEditedBook {
+    margin-left: 12cm;
+}
+
+.CancelEditBook {
+    margin-left: .6cm;
+}
+
+.submit_book_button {
+    background-color: rgb(228, 135, 30);
+    border-radius: 15px;
+    border-style: solid;
+    border-color: rgb(228, 135, 30);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.SaveEditBook {
+    margin-top: .1cm;
+    margin-bottom: .1cm;
+    margin-left: .5cm;
+    margin-right: .5cm;
+    font-family: Architects Daughter, sans-serif;
+}
+
+.CancelEditBook {
+    background-color: rgb(190, 102, 102);
+    border-radius: 15px;
+    border-style: solid;
+    border-color: rgb(190, 102, 102);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.CancelEditBook:hover {
+    background-color: rgb(141, 65, 65);
+}
+
+.submit_book_button:hover {
+    background-color: #aa6a20;
+}
+
+.CancelEditedBook {
+    margin-top: .1cm;
+    margin-bottom: .1cm;
+    margin-left: .3cm;
+    margin-right: .3cm;
+    font-family: Architects Daughter, sans-serif;
+}
+
