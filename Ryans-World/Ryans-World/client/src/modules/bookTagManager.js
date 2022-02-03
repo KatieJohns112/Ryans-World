@@ -1,3 +1,5 @@
+import { getToken } from "./authManager";
+
 const baseUrl = "/api/bookTag";
 
 export const getAllBookTags = () => {
@@ -31,4 +33,16 @@ export const getBookTagsByBookId = (bookId) => {
         },
     }).then((res) => res.json());
 };
+
+export const removeBookTag = (bookTagId) => {
+    return getToken().then(token => {
+        return fetch(`${baseUrl}/${bookTagId}`, {
+            method: "DELETE",
+            headers: {
+                Authorization: `Bearer ${token}`,
+                "Content-Type": "application/json",
+            }
+        })
+    })
+}
 
