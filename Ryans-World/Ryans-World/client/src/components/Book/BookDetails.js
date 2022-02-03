@@ -53,6 +53,10 @@ export const Book = () => {
                     : null}
             </ul>
             <Button
+                className="DeleteBookTags"
+                onClick={() => history.push(`/deleteBookTags/${id}`)}
+            >Delete Tags</Button>
+            <Button
                 className="ManageTags"
                 onClick={() => history.push(`/manageTags/${id}`)}
             >Manage Tags

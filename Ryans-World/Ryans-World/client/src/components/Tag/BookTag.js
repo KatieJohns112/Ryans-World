@@ -8,20 +8,22 @@ import Book from "../Book/BookDetails";
 import { addBookTag } from "../../modules/bookTagManager";
 
 export const BookTagForm = () => {
-    const [bookTags, setBookTags] = useState([]);
     const [tags, setTags] = useState([]);
     const [book, setBook] = useState(null);
     const [selectedTags, setSelectedTags] = useState([]);
-    const [checked, setChecked] = useState(false);
 
     const history = useHistory();
 
     const { id } = useParams();
 
     useEffect(() => {
-        getAllTags().then(setTags);
-        getBookTagsByBookId(id).then(setBookTags);
-        getBook(id).then(setBook);
+        Promise.all([getAllTags(), getBookTagsByBookId(id), getBook(id)]).then(([tags, bookTags, book]) => {
+            setBook(book);
+            const availableTags = tags.filter(t => {
+                return !bookTags.find(bt => bt.tagId === t.id)
+            })
+            setTags(availableTags);
+        });
     }, []);
 
     const handleChange = (event) => {
