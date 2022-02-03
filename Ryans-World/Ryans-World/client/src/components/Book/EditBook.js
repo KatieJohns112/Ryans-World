@@ -39,67 +39,73 @@ export const BookUpdateForm = () => {
     };
 
     return (
-        <form>
-            <h3>Edit Book</h3>
-            <div>
-                <label className="BookAttribute" htmlFor="title">Title :</label> <input
-                    type="text"
-                    required
-                    className="form-control"
-                    onChange={handleControlledInputChange}
-                    id="title"
-                    value={book.title} />
-            </div>
-            <div>
-                <label className="BookAttribute" htmlFor="author">Author :</label> <input
-                    type="text"
-                    required
-                    className="form-control"
-                    onChange={handleControlledInputChange}
-                    id="author"
-                    value={book.author} />
-            </div>
-            <div>
-                <label className="BookAttribute" htmlFor="imageLocation">Image :</label> <input
-                    type="text"
-                    required
-                    className="form-control"
-                    onChange={handleControlledInputChange}
-                    id="imageLocation"
-                    value={book.imageLocation} />
-            </div>
-            <div>
-                <label className="BookAttribute" htmlFor="favoriteScale">FavoriteScale :</label> <input
-                    type="text"
-                    required
-                    className="form-control"
-                    onChange={handleControlledInputChange}
-                    id="favoriteScale"
-                    value={book.favoriteScale} />
-            </div>
-            <div>
-                <label className="BookAttribute" htmlFor="dayOfWeek">When to read :</label> <input
-                    type="text"
-                    required
-                    className="form-control"
-                    onChange={handleControlledInputChange}
-                    id="dayOfWeek"
-                    value={book.dayOfWeek} />
-            </div>
-            <div className="alignRight">
-                <button
-                    type="EditBookButton"
-                    onClick={handleConfirm}
-                    className="submit_book_button"
-                >Save</button>
-            </div>
-            <button
-                className="EditBookButton"
-                variant="secondary"
-                onClick={() => history.push("/book")}
-            >Cancel
-            </button>
-        </form>
+        <>
+            <h3 className="EditBookHeader">Edit Book</h3>
+            <form className="EditBookForm">
+                <div className="MainUpdateBook">
+                    <div className="UpdateBookCharacter">
+                        <label className="BookAttribute" htmlFor="title">Title :</label> <input
+                            type="text"
+                            required
+                            className="form-control"
+                            onChange={handleControlledInputChange}
+                            id="title"
+                            value={book.title} />
+                    </div>
+                    <div className="UpdateBookCharacter">
+                        <label className="BookAttribute" htmlFor="author">Author :</label> <input
+                            type="text"
+                            required
+                            className="form-control"
+                            onChange={handleControlledInputChange}
+                            id="author"
+                            value={book.author} />
+                    </div>
+                    <div className="UpdateBookCharacter">
+                        <label className="BookAttribute" htmlFor="imageLocation">Image :</label> <input
+                            type="text"
+                            required
+                            className="form-control"
+                            onChange={handleControlledInputChange}
+                            id="imageLocation"
+                            value={book.imageLocation} />
+                    </div>
+                    <div className="UpdateBookCharacter">
+                        <label className="BookAttribute" htmlFor="favoriteScale">FavoriteScale :</label> <input
+                            type="text"
+                            required
+                            className="form-control"
+                            onChange={handleControlledInputChange}
+                            id="favoriteScale"
+                            value={book.favoriteScale} />
+                    </div>
+                    <div className="UpdateBookCharacter">
+                        <label className="BookAttribute" htmlFor="dayOfWeek">When to read :</label> <input
+                            type="text"
+                            required
+                            className="form-control"
+                            onChange={handleControlledInputChange}
+                            id="dayOfWeek"
+                            value={book.dayOfWeek} />
+                    </div>
+                    <div className="UpdateBookButtons">
+                        <div className="SaveEditedBook">
+                            <button
+                                type="EditBookButton"
+                                onClick={handleConfirm}
+                                className="submit_book_button"
+                            ><p className="SaveEditBook">Save</p></button>
+                        </div>
+                        <button
+                            className="CancelEditBook"
+                            variant="secondary"
+                            onClick={() => history.push("/book")}
+                        ><p className="CancelEditedBook">Cancel</p>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </>
     )
 }
 
