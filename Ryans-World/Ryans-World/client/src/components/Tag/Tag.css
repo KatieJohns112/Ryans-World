@@ -406,3 +406,16 @@
     font-family: Architects Daughter, sans-serif;
     font-size: .8cm;
 }
+
+.selectfield {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20cm;
+}
+
+.BookTagName {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1cm;
+    margin-top: -.6cm;
+}

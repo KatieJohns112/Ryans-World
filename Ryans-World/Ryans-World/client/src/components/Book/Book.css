@@ -406,7 +406,7 @@
 }
 
 .BookDetailHeader {
-    background-color: rgb(209, 167, 104);
+    background-color: grey;
     margin-left: 18em;
     margin-right: 18em;
     border-style: solid;
@@ -423,6 +423,7 @@
     font-family: Architects Daughter, sans-serif;
     font-size: .8cm;
     margin-top: .2cm;
+    margin-bottom: .2cm
 }
 
 .BookDetailButtons {
@@ -480,4 +481,6 @@
 .TagsUL {
     list-style: none;
 }
+
+
 

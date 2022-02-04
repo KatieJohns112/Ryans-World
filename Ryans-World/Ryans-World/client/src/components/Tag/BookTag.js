@@ -6,6 +6,7 @@ import { addTag, getAllTags } from "../../modules/tagManager";
 import { getBook } from "../../modules/bookManager";
 import Book from "../Book/BookDetails";
 import { addBookTag } from "../../modules/bookTagManager";
+import "./Tag.css"
 
 export const BookTagForm = () => {
     const [tags, setTags] = useState([]);
@@ -55,11 +56,10 @@ export const BookTagForm = () => {
         <>
             <div className="multiselector">
                 <div className="selectfield">
-                    <label htmlFor="tags">Please select Tag(s)</label>
                     {tags.map(t => (
                         <>
                             <input type="checkbox" onChange={handleChange} key={t.id} value={t.id} />
-                            <p>{t.name}</p>
+                            <p className="BookTagName">{t.name}</p>
                         </>
                     ))}
                 </div>
