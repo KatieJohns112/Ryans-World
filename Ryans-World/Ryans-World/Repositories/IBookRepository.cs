@@ -13,5 +13,6 @@ namespace Ryans_World.Repositories
         void Delete(int bookId);
         void Update(Book book);
         Book GetBookById(int id);
+        List<Book> GetBooksByUserId(int id);
     }
 }

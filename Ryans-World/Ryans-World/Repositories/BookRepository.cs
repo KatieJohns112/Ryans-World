@@ -181,5 +181,61 @@ namespace Ryans_World.Repositories
                 }
             }
         }
+
+        public List<Book> GetBooksByUserId(int id)
+        {
+            using (var conn = Connection)
+            {
+                conn.Open();
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = @"SELECT b.Id, b.Title, b.Author, b.DayOfWeek, b.FavoriteScale, 
+                                        b.ImageLocation, b.UserProfileId, b.CategoryId, c.Name AS CategoryName,
+                                        u.Id AS UserId, u.DisplayName, u.FirstName, u.LastName, u.Email, u.ImageLocation AS UserImage
+                                        FROM Book b 
+                                        LEFT JOIN Category c
+                                        ON b.CategoryId = c.Id
+                                        LEFT JOIN UserProfile u
+                                        ON b.UserProfileId = u.Id
+                                        WHERE b.UserProfileId = @id";
+
+                    DbUtils.AddParameter(cmd, "@id", id);
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        var books = new List<Book>();
+                        while (reader.Read())
+                        {
+                            books.Add(new Book()
+                            {
+                                Id = DbUtils.GetInt(reader, "Id"),
+                                Title = DbUtils.GetString(reader, "Title"),
+                                Author = DbUtils.GetString(reader, "Author"),
+                                DayOfWeek = DbUtils.GetString(reader, "DayOfWeek"),
+                                FavoriteScale = DbUtils.GetInt(reader, "FavoriteScale"),
+                                ImageLocation = DbUtils.GetString(reader, "ImageLocation"),
+                                CategoryId = DbUtils.GetInt(reader, "CategoryId"),
+                                Category = new Category()
+                                {
+                                    Id = DbUtils.GetInt(reader, "Id"),
+                                    Name = DbUtils.GetString(reader, "CategoryName")
+                                },
+                                UserProfileId = DbUtils.GetInt(reader, "UserId"),
+                                UserProfile = new UserProfile()
+                                {
+                                    Id = DbUtils.GetInt(reader, "UserId"),
+                                    DisplayName = DbUtils.GetString(reader, "DisplayName"),
+                                    FirstName = DbUtils.GetString(reader, "FirstName"),
+                                    LastName = DbUtils.GetString(reader, "LastName"),
+                                    Email = DbUtils.GetString(reader, "Email"),
+                                    ImageLocation = DbUtils.GetString(reader, "ImageLocation")
+                                }
+                            });
+                        }
+                        return books;
+                    }
+                }
+            }
+        }
     }
 }
