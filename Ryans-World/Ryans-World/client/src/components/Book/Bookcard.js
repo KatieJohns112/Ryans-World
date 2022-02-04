@@ -22,7 +22,7 @@ export const BookCard = ({ book }) => {
         <div className="MainBookBox">
             <div className="BookBox">
 
-                <img className=" BookImage" src={book.imageLocation} alt="picture" />
+                <img className="BookImage" src={book.imageLocation} alt="picture" />
 
                 <div className="BookCard">
                     <p className="BookElement">Title : {book.title}</p>

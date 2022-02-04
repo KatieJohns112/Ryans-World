@@ -34,34 +34,37 @@ export const Book = () => {
 
 
     return (
-        <div>
-            {book.imageLocation ? (
-                <div className="BookDetailsImage">
-                    <img src={book.imageLocation} alt="bookimage"></img>
+        <>
+            <div className="MainBookDetail">
+                <p className="BookDetailHeader"><p className="BookName">- Book Details -</p></p>
+                <div className="BookOnly">
+                    <img className="BookImageDetail" src={book.imageLocation} alt="picture" />
+                    <div className="BookDetailProperties">
+                        <p>Title : {book.title}</p>
+                        <p>Author : {book.author}</p>
+                        <p>When to read : {book.dayOfWeek}</p>
+                        <p>Favorite Scale : {book.favoriteScale}</p>
+                        <h2>Tags :</h2>
+                        <ul className="TagsUL">
+                            {bookTags != null
+                                ? bookTags.map((t) => <li>☼ {t.tag.name}</li>)
+                                : null}
+                        </ul>
+                    </div>
+                    <ul className="BookDetailButtons">
+                        <li><Button
+                            className="DeleteBookTags"
+                            onClick={() => history.push(`/deleteBookTags/${id}`)}
+                        ><p className="DeleteTagsLink">Delete Tags</p></Button></li>
+                        <li><Button
+                            className="ManageTags"
+                            onClick={() => history.push(`/manageTags/${id}`)}
+                        ><p className="AddTags">Add Tags</p>
+                        </Button></li>
+                    </ul>
                 </div>
-            ) : (
-                <></>
-            )}
-            <p>{book.title}</p>
-            <p>{book.author}</p>
-            <p>{book.dayOfWeek}</p>
-            <p>{book.favoriteScale}</p>
-            <h4>Tags</h4>
-            <ul>
-                {bookTags != null
-                    ? bookTags.map((t) => <li>{t.tag.name}</li>)
-                    : null}
-            </ul>
-            <Button
-                className="DeleteBookTags"
-                onClick={() => history.push(`/deleteBookTags/${id}`)}
-            >Delete Tags</Button>
-            <Button
-                className="ManageTags"
-                onClick={() => history.push(`/manageTags/${id}`)}
-            >Manage Tags
-            </Button>
-        </div>
+            </div>
+        </>
     );
 };
 

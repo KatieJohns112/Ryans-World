@@ -102,11 +102,11 @@
 }
 
 .DetailTag {
-    background-color: rgb(228, 135, 30);
+    background-color: rgb(209, 167, 104);
     border-radius: 15px;
     border-style: solid;
     margin-right: 30px;
-    border-color: rgb(228, 135, 30);
+    border-color: rgb(209, 167, 104);
     box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),0px 4px 4px rgba(0, 0, 0, 0.25);
     /* margin-left:.2cm; */
@@ -122,6 +122,7 @@
     margin-left: .4cm;
     margin-right: .4cm;;
     font-family: Architects Daughter, sans-serif;
+    font-weight: bold;
 }
 
 .NameUpdateTag {
@@ -245,11 +246,11 @@
 }
 
 .ConfirmCancelTag {
-    background-color: rgb(228, 135, 30);
+    background-color: rgb(209, 167, 104);
     border-radius: 15px;
     border-style: solid;
     margin-right: 30px;
-    border-color: rgb(228, 135, 30);
+    border-color: rgb(209, 167, 104);
     box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),0px 4px 4px rgba(0, 0, 0, 0.25);
     margin-left:.2cm;
@@ -279,6 +280,7 @@
     margin-left: .3cm;
     margin-right: .3cm;
     font-family: Architects Daughter, sans-serif;
+    font-weight: bold;
 }
 
 .TagCancel {
@@ -343,11 +345,11 @@
 }
 
 .submit_tag_button {
-    background-color: rgb(228, 135, 30);
+    background-color: rgb(209, 167, 104);
     border-radius: 15px;
     border-style: solid;
     margin-right: 30px;
-    border-color: rgb(228, 135, 30);
+    border-color: rgb(209, 167, 104);
     box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),0px 4px 4px rgba(0, 0, 0, 0.25);
     margin-right: 13px;

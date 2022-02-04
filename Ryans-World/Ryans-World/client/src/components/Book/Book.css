@@ -77,10 +77,10 @@
 }
 
 .DetailBook {
-    background-color: rgb(228, 135, 30);
+    background-color: rgb(209, 167, 104);
     border-radius: 15px;
     border-style: solid;
-    border-color: rgb(228, 135, 30);
+    border-color: rgb(209, 167, 104);
     box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -195,10 +195,10 @@
 }
 
 .SaveBookButton {
-    background-color: rgb(228, 135, 30);
+    background-color: rgb(209, 167, 104);
     border-radius: 15px;
     border-style: solid;
-    border-color: rgb(228, 135, 30);
+    border-color: rgb(209, 167, 104);
     box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),0px 4px 4px rgba(0, 0, 0, 0.25);
     margin-left: 4cm;
@@ -255,10 +255,10 @@
 }
 
 .submit_book_button {
-    background-color: rgb(228, 135, 30);
+    background-color: rgb(209, 167, 104);
     border-radius: 15px;
     border-style: solid;
-    border-color: rgb(228, 135, 30);
+    border-color: rgb(209, 167, 104);
     box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -294,5 +294,190 @@
     margin-left: .3cm;
     margin-right: .3cm;
     font-family: Architects Daughter, sans-serif;
+}
+
+.DeleteBookForm {
+    background-color:rgb(216, 215, 215);
+    padding-top: 2cm;
+    padding-bottom: 2cm;
+    margin-top: 3cm;
+    margin-left: 12cm;
+    margin-right: 12cm;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+}
+
+.DeleteBookButtons {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2cm;
+    list-style: none;
+    margin-bottom: -1cm;
+}
+
+.ConfirmCancelBook {
+    background-color: rgb(209, 167, 104);
+    border-radius: 15px;
+    border-style: solid;
+    margin-right: 30px;
+    border-color: rgb(209, 167, 104);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-left:.2cm;
+}
+
+.ConfirmCancelBook:hover {
+    background-color: #aa6a20;
+}
+
+.ConfirmDeleteBook {
+    background-color: rgb(190, 102, 102);
+    border-radius: 15px;
+    border-style: solid;
+    border-color: rgb(190, 102, 102);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-right:.2cm;
+}
+
+.ConfirmDeleteBook:hover {
+    background-color: rgb(141, 65, 65);
+}
+
+
+.BookDelete {
+    margin-top: .1cm;
+    margin-bottom: .1cm;
+    margin-left: .3cm;
+    margin-right: .3cm;
+    font-family: Architects Daughter, sans-serif;
+}
+
+.BookCancel {
+    margin-top: .1cm;
+    margin-bottom: .1cm;
+    margin-left: .3cm;
+    margin-right: .3cm;
+    font-family: Architects Daughter, sans-serif;
+}
+
+.TextBook {
+    display: flex;
+    justify-content: center;
+    font-family: Architects Daughter, sans-serif;
+    font-size: .7cm;
+}
+
+.MainBookDetail {
+    background-color: rgb(168, 167, 167);
+    margin-left: 18em;
+    margin-right: 18em;
+    padding-bottom: 3em;
+    padding-top: 2em;
+    margin-bottom: 2em;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    border-width: 1px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.BookImageDetail {
+    height: 400px;
+    width: 400px;
+    margin-bottom: 2cm;
+    margin-left: 3cm;
+    margin-top: 1cm;
+    margin-right: 1em;;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    margin-bottom: 3cm;
+}
+
+.BookDetailProperties {
+    margin-left: 15cm;
+    margin-top: -14cm;
+    font-family: Architects Daughter, sans-serif;
+    font-size: .6cm;
+}
+
+.BookDetailHeader {
+    background-color: rgb(209, 167, 104);
+    margin-left: 18em;
+    margin-right: 18em;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    border-width: 1px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.BookName {
+    display: flex;
+    justify-content: center;
+    font-family: Architects Daughter, sans-serif;
+    font-size: .8cm;
+    margin-top: .2cm;
+}
+
+.BookDetailButtons {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.DeleteBookTags {
+    background-color: rgb(190, 102, 102);
+    border-radius: 25px;
+    border-style: solid;
+    border-color: rgb(190, 102, 102);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-right:.2cm;
+    margin-left: 15cm;
+}
+
+.ManageTags {
+    background-color: rgb(209, 167, 104);
+    border-radius: 25px;
+    border-style: solid;
+    border-color: rgb(209, 167, 104);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%), 0px 4px 4px rgb(0 0 0 / 25%);
+    margin-left: .5cm;
+}
+
+.ManageTags:hover {
+    background-color: #aa6a20;
+}
+
+.DeleteBookTags:hover {
+    background-color: rgb(141, 65, 65);
+}
+
+.DeleteTagsLink {
+    margin-top: .1cm;
+    margin-bottom: .1cm;
+    margin-left: .3cm;
+    margin-right: .3cm;
+    font-family: Architects Daughter, sans-serif;
+    font-weight: bold;
+}
+
+.AddTags {
+    margin-top: .1cm;
+    margin-bottom: .1cm;
+    margin-left: .3cm;
+    margin-right: .3cm;
+    font-family: Architects Daughter, sans-serif;
+}
+
+.TagsUL {
+    list-style: none;
 }
 
