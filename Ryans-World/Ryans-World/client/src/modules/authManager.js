@@ -4,6 +4,10 @@ import "firebase/auth";
 const _apiUrl = "/api/userprofile";
 
 const _doesUserExist = (firebaseUserId) => {
+    _getUserByFirebaseId(firebaseUserId).then(res => {
+        console.log(res);
+        localStorage.setItem('myUser', res.id)
+    })
     return getToken().then((token) =>
         fetch(`${_apiUrl}/DoesUserExist/${firebaseUserId}`, {
             method: "GET",
@@ -12,6 +16,16 @@ const _doesUserExist = (firebaseUserId) => {
             }
         }).then(resp => resp.ok));
 };
+
+const _getUserByFirebaseId = (firebaseUserId) => {
+    return getToken().then((token) =>
+        fetch(`${_apiUrl}/${firebaseUserId}`, {
+            method: "GET",
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        }).then(resp => resp.json()));
+}
 
 const _saveUser = (userProfile) => {
     return getToken().then((token) =>

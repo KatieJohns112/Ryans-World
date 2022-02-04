@@ -62,6 +62,12 @@ namespace Ryans_World.Controllers
             return Ok(book);
         }
 
+        [HttpGet("currentUserBooks/{id}")]
+        public IActionResult CurrentUserBooks(int id)
+        {
+            return Ok(_bookRepository.GetBooksByUserId(id));
+        }
+
         private UserProfile GetCurrentUserProfile()
         {
             var fireBaseUserId = User.FindFirst(ClaimTypes.NameIdentifier).Value;

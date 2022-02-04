@@ -19,6 +19,25 @@ export const getAllBooks = () => {
     })
 }
 
+
+export const getAllBooksByUserId = (id) => {
+    return getToken().then(token => {
+        return fetch(baseUrl + `/currentUserBooks/${id}`, {
+            method: "GET",
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        }).then(res => {
+            if (res.ok) {
+                return res.json()
+            } else {
+                throw new Error("An error occured while retrieving all books")
+            }
+        })
+    })
+}
+
+
 export const addBook = (newBook) => {
     return getToken().then(token => {
         return fetch(baseUrl, {

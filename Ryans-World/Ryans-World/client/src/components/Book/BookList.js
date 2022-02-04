@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import BookCard from "./Bookcard";
-import { getAllBooks } from "../../modules/bookManager";
+import { getAllBooks, getAllBooksByUserId } from "../../modules/bookManager";
 import { useHistory } from "react-router-dom";
 import './Book.css'
 
@@ -10,9 +10,9 @@ export const BookList = () => {
     const history = useHistory();
 
     const getBooks = () => {
-        return getAllBooks().then(books => {
-            setBooks(books)
-        });
+        return getAllBooksByUserId(localStorage.getItem("myUser")).then(res =>
+            setBooks(res)
+        );
     };
 
     useEffect(() => {
