@@ -31,6 +31,7 @@
 .nav_item_logout {
     color: rgb(104, 98, 98);
     font-size: .7cm;
+    font-family: Architects Daughter, sans-serif;
 }
 
 .Title {
@@ -38,6 +39,10 @@
   font-size: .7cm;
   color: whitesmoke;
   margin-left: -4cm
+}
+
+.Title:hover {
+    color:whitesmoke;
 }
 
 div.container-fluid {
@@ -48,4 +53,8 @@ div.container-fluid {
     height: 50px;
     margin-top:-.2cm;
     margin-left: -3cm;
+}
+
+.nav_item_logout {
+
 }

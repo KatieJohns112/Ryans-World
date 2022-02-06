@@ -2,8 +2,8 @@
 
 .NewBookButton {
     margin-bottom: 1cm;
-    margin-left: 290px;
-    background-color: rgb(71, 161, 177);
+    margin-left: 305px;
+    background-color: rgb(123, 170, 179);
     border-radius: 15px;
     border-style: solid;
     border-color: black;
@@ -29,7 +29,7 @@
     border-style: solid;
     border-color: black;
     border-width: 1px;
-    margin-left: 3.5em;
+    margin-left: 2em;
     margin-bottom: 1em;
 }
 
@@ -66,10 +66,10 @@
 }
 
 .UpdateBook {
-    background-color: rgb(71, 161, 177);
+    background-color: rgb(123, 170, 179);
     border-radius: 15px;
     border-style: solid;
-    border-color: rgb(71, 161, 177);
+    border-color: rgb(123, 170, 179);
     box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),0px 4px 4px rgba(0, 0, 0, 0.25); 
     margin-left: 1em;
@@ -134,8 +134,8 @@
 
 .MainBookBox {
     background-color: rgb(168, 167, 167);
-    margin-left: 18em;
-    margin-right: 18em;
+    margin-left: 19em;
+    margin-right: 20em;
     padding-bottom: 1em;
     padding-top: 2em;
     margin-bottom: 2em;
@@ -145,6 +145,7 @@
     border-width: 1px;
     box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-top: -1em;
 }
 
 .BookForm {
@@ -165,8 +166,8 @@
 
 .NewBook {
     border-style: solid;
-    border-color: rgb(216, 215, 215);
     background-color: rgb(216, 215, 215);
+    border-color: rgb(216, 215, 215);
     font-family: Architects Daughter, sans-serif;
     font-size: 20px;
 }

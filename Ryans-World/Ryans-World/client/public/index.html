@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="Web site created using create-react-app" />
+  <link rel="stylesheet" type="text/css" href="main.css" />
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
   <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -26,9 +27,12 @@
 </head>
 
 <body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div>
-  <!--
+  <div id="page-container">
+    <style></style>
+    <div id="content-wrap">
+      <noscript>You need to enable JavaScript to run this app.</noscript>
+      <div id="root"></div>
+      <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -38,12 +42,17 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    </div>
+    <footer
+      style="position: absolute; bottom: 0; width: 100%; display: flex; padding-top: .5em; padding-bottom: .5em; justify-content: center; margin-bottom: .5em; background-color: grey; font-weight: bold;">
+      All Rights Reserved Ryans World 2022
+    </footer>
+  </div>
 </body>
 <style>
   body {
     background-color: rgba(187, 187, 187, 0.952);
   }
 </style>
-
 
 </html>
