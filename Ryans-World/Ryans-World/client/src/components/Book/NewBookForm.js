@@ -74,7 +74,7 @@ export const BookForm = () => {
                             <label htmlFor="imageLocation">Url Image of book cover: </label>
                             <input type="text" id="imageLocation"
                                 onChange={handleControlledInputChange} required autoFocus className="form-control"
-                                placeholder="Tag name" value={book.imageLocation} />
+                                placeholder="Image URL" value={book.imageLocation} />
                         </div>
                     </fieldset>
                     <button className="SaveBookButton"
