@@ -63,6 +63,7 @@ export const login = (email, pw) => {
 
 
 export const logout = () => {
+    localStorage.clear();
     firebase.auth().signOut()
 };
 
@@ -72,7 +73,7 @@ export const register = (userProfile, password) => {
         .then((createResponse) => _saveUser({
             ...userProfile,
             firebaseUserId: createResponse.user.uid
-        }));
+        }))
 };
 
 

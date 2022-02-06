@@ -55,10 +55,10 @@ export default function Header({ isLoggedIn }) {
                     {!isLoggedIn &&
                         <>
                             <li className='nav_item'>
-                                <NavLink tag={RRNavLink} to="/login">Login</NavLink>
+                                <NavLink tag={RRNavLink} to="/login"></NavLink>
                             </li>
                             <li className='nav_item'>
-                                <NavLink tag={RRNavLink} to="/register">Register</NavLink>
+                                <NavLink tag={RRNavLink} to="/register"></NavLink>
                             </li>
                         </>
                     }
