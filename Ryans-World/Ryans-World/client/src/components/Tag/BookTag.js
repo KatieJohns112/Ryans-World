@@ -54,6 +54,7 @@ export const BookTagForm = () => {
 
     return (
         <>
+            <h2 className="SelectTags">Select new Book Tag(s)</h2>
             <div className="multiselector">
                 <div className="selectfield">
                     {tags.map(t => (
@@ -65,7 +66,7 @@ export const BookTagForm = () => {
                 </div>
                 <button className="save-booktag-button"
                     onClick={handleClickSaveBookTag}>
-                    Save Tags
+                    <p className="SaveTagsButton"> Save Tags</p>
                 </button>
             </div>
         </>

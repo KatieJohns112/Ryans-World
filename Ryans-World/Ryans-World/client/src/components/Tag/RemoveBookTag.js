@@ -40,19 +40,19 @@ export const RemoveBookTagForm = () => {
 
     return (
         <>
+            <h2 className="SelectTags">Remove Book Tag(s)</h2>
             <div className="multiselector">
                 <div className="selectfield">
-                    <label htmlFor="tags">Selected tag(s) you want to remove</label>
                     {bookTags.map(t => (
                         <>
                             <input type="checkbox" onChange={handleChange} key={t.id} value={t.id} />
-                            <p>{t.tag.name}</p>
+                            <p className="BookTagName">{t.tag.name}</p>
                         </>
                     ))}
                 </div>
                 <button className="remove-booktag-button"
                     onClick={handleClickRemoveBookTag}>
-                    Remove Tags
+                    <p className="SaveTagsButton">Remove Tags</p>
                 </button>
             </div>
         </>

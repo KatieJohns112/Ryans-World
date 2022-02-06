@@ -204,6 +204,17 @@
     font-family: Architects Daughter, sans-serif;
 }
 
+.ConfirmDeleteTag {
+    background-color: rgb(190, 102, 102);
+    border-radius: 15px;
+    border-style: solid;
+    margin-right: 30px;
+    border-color: rgb(190, 102, 102);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),0px 4px 4px rgba(0, 0, 0, 0.25);
+   
+}
+
 .SaveTagButton:hover {
     background-color: rgb(33, 111, 124);
 }
@@ -261,12 +272,7 @@
 }
 
 .ConfirmDeleteTag {
-    background-color: rgb(190, 102, 102);
-    border-radius: 15px;
-    border-style: solid;
-    border-color: rgb(190, 102, 102);
-    box-sizing: border-box;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),0px 4px 4px rgba(0, 0, 0, 0.25);
+
     margin-right:.2cm;
 }
 
@@ -410,7 +416,8 @@
 .selectfield {
     display: flex;
     flex-direction: column;
-    margin-left: 20cm;
+    margin-left: 17em;
+    margin-top: 1cm;
 }
 
 .BookTagName {
@@ -418,4 +425,76 @@
     flex-direction: column;
     margin-left: 1cm;
     margin-top: -.6cm;
+    font-family: Architects Daughter, sans-serif;
+    font-size: .5cm;
+}
+
+.multiselector {
+    background-color: rgb(168, 167, 167);
+    margin-right: 30em;
+    margin-left: 33em;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    margin-top: 1cm;
+}
+
+.NewTagMessage {
+    background-color: rgb(47, 151, 165);
+    padding-top: 2em;
+    padding-bottom: 2em;
+    margin-right: 35cm;
+    margin-left: 2cm;
+    margin-bottom: -4cm;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    font-family: Architects Daughter, sans-serif;
+}
+
+.SelectTags {
+    font-family: Architects Daughter, sans-serif;
+    display: flex;
+    justify-content: center;
+    font-size: .8cm;
+}
+
+.save-booktag-button {
+    margin-left: 13cm;
+    margin-bottom: 2em;
+    background-color: rgb(209, 167, 104);
+    border-radius: 15px;
+    border-style: solid;
+    border-color: rgb(209, 167, 104);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.save-booktag-button:hover {
+    background-color: #aa6a20;
+}
+
+.SaveTagsButton {
+    font-family: Architects Daughter, san;
+    margin-top: .1cm;
+    margin-bottom: .1cm;
+    margin-left: .3cm;
+    margin-right: .3cm;
+}
+
+.remove-booktag-button {
+    background-color: rgb(190, 102, 102);
+    margin-left: 13cm;
+    margin-bottom: 2em;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: rgb(190, 102, 102);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.remove-booktag-button:hover {
+    background-color: rgb(141, 65, 65);
 }
