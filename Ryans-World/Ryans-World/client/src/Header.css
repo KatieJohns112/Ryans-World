@@ -15,6 +15,7 @@
     color: black;
     font-size: .7cm;
     font-family: Architects Daughter, sans-serif;
+    list-style: none;
 }
 
 .nav_item:hover {
