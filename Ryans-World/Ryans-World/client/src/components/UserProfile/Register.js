@@ -20,9 +20,13 @@ export default function Register() {
         if (password && password !== confirmPassword) {
             alert("Passwords don't match. Do better.");
         } else {
-            const userProfile = { firstName, lastName, displayName, imageLocation, email };
+            const userProfile = { FirstName: firstName, LastName: lastName, DisplayName: displayName, ImageLocation: imageLocation, Email: email };
+            debugger;
             register(userProfile, password)
-                .then(() => history.push("/home"));
+                .then((profile) => {
+                    localStorage.setItem("myUser", profile.id);
+                    history.push("/home")
+                });
         }
     };
 
