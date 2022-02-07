@@ -14,14 +14,14 @@
 
 ## Server Side
 
-1. Install Nuget Packages `Microsoft.Data.SQLClient` version 4.0.1 and `Microsoft.ASP.Net.Core.Authentication.JWTBearer`version 5.0.5
+1. Install Nuget Packages `Microsoft.Data.SQLClient` version 4.0.1 as well as `Microsoft.ASP.Net.Core.Authentication.JWTBearer`version 5.0.5
 
 ## Client Side
 
-1. In `client` directory and run `npx create-react-app .`
+1. In `client` directory run `npx create-react-app .`
 1. Install firebase and react router using `npm install react-router-dom@5.2.0 firebase@8.7.1`
 
-### When initialing running this app run the back end server then `npm start` inside the `client` directory in the repo.
+> **NOTE:** When running this app run the back end server first then run `npm start` inside the `client` directory in the repo.
 
 ## How to navigate Ryan's World
 
