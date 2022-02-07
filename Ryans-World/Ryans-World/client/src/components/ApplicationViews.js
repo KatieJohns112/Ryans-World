@@ -14,6 +14,7 @@ import Book from "./Book/BookDetails"
 import BookTagForm from "./Tag/BookTag";
 import RemoveBookTagForm from "./Tag/RemoveBookTag";
 import CategoryList from "./Category/CategoryList";
+import { CategoryForm } from "./Category/AddCategory";
 
 
 export default function ApplicationViews({ isLoggedIn }) {
@@ -59,6 +60,9 @@ export default function ApplicationViews({ isLoggedIn }) {
                 </Route>
                 <Route path="/category" exact>
                     {isLoggedIn ? <CategoryList /> : <Redirect to="/login" />}
+                </Route>
+                <Route path="/category/create">
+                    {isLoggedIn ? <CategoryForm /> : <Redirect to="/login" />}
                 </Route>
                 <Route path="/login">
                     <Login />

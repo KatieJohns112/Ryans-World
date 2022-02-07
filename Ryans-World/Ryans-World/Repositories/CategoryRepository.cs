@@ -39,5 +39,20 @@ namespace Ryans_World.Repositories
                 }
             }
         }
+
+        public void Add(Category category)
+        {
+            using (SqlConnection conn = Connection)
+            {
+                conn.Open();
+                using (SqlCommand cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = @"INSERT INTO Category (Name)
+                                        VALUES (@Name)";
+                    cmd.Parameters.AddWithValue("@Name", category.Name);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Ryans_World.Models;
 using Ryans_World.Repositories;
 using System;
 using System.Collections.Generic;
@@ -22,6 +23,14 @@ namespace Ryans_World.Controllers
         public IActionResult Get()
         {
             return Ok(_categoryRepository.GetAll());
+        }
+
+
+        [HttpPost]
+        public IActionResult Add(Category category)
+        {
+            _categoryRepository.Add(category);
+            return CreatedAtAction("Get", new { id = category.Id }, category);
         }
     }
 }
