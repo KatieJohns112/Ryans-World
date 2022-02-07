@@ -33,6 +33,7 @@ namespace Ryans_World
             services.AddTransient<IBookRepository, BookRepository>();
             services.AddTransient<ITagRepository, TagRepository>();
             services.AddTransient<IBookTagRepository, BookTagRepository>();
+            services.AddTransient<ICategoryRepository, CategoryRepository>();
 
             var firebaseProjectId = Configuration.GetValue<string>("FirebaseProjectId");
             var googleTokenUrl = $"https://securetoken.google.com/{firebaseProjectId}";
