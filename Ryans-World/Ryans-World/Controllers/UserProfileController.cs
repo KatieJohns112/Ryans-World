@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Ryans_World.Models;
 using Ryans_World.Repositories;
 using System;
 using System.Collections.Generic;
@@ -35,5 +36,11 @@ namespace Ryans_World.Controllers
             return Ok();
         }
 
+        [HttpPost("userprofile")]
+        public IActionResult Register(UserProfile profile)
+        {
+            _userProfileRepository.Add(profile);
+            return Ok(profile);
+        }
     }
 }

@@ -29,11 +29,12 @@ const _getUserByFirebaseId = (firebaseUserId) => {
 
 const _saveUser = (userProfile) => {
     return getToken().then((token) =>
-        fetch(_apiUrl, {
+        fetch(_apiUrl + "/UserProfile", {
             method: "POST",
             headers: {
                 Authorization: `Bearer ${token}`,
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                "Accept": "application/json"
             },
             body: JSON.stringify(userProfile)
         }).then(resp => resp.json()));
@@ -69,11 +70,11 @@ export const logout = () => {
 
 
 export const register = (userProfile, password) => {
-    return firebase.auth().createUserWithEmailAndPassword(userProfile.email, password)
+    return firebase.auth().createUserWithEmailAndPassword(userProfile.Email, password)
         .then((createResponse) => _saveUser({
             ...userProfile,
             firebaseUserId: createResponse.user.uid
-        }))
+        }));
 };
 
 

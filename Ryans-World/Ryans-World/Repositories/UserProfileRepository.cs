@@ -49,6 +49,30 @@ namespace Ryans_World.Repositories
                     }
                 }
             }
+
+        public void Add(UserProfile userProfile)
+        {
+            using (var conn = Connection)
+            {
+                conn.Open();
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = @"INSERT INTO UserProfile (FireBaseUserId, FirstName, LastName, DisplayName, 
+                                                                 Email, ImageLocation)
+                                        OUTPUT INSERTED.ID
+                                        VALUES (@FireBaseUserId, @FirstName, @LastName, @DisplayName, 
+                                                @Email, @ImageLocation)";
+                    DbUtils.AddParameter(cmd, "@FireBaseUserId", userProfile.FireBaseUserId);
+                    DbUtils.AddParameter(cmd, "@FirstName", userProfile.FirstName);
+                    DbUtils.AddParameter(cmd, "@LastName", userProfile.LastName);
+                    DbUtils.AddParameter(cmd, "@DisplayName", userProfile.DisplayName);
+                    DbUtils.AddParameter(cmd, "@Email", userProfile.Email);
+                    DbUtils.AddParameter(cmd, "@ImageLocation", userProfile.ImageLocation);
+
+                    userProfile.Id = (int)cmd.ExecuteScalar();
+                }
+            }
         }
     }
+}
 
