@@ -13,6 +13,7 @@ import BookUpdateForm from "./Book/EditBook";
 import Book from "./Book/BookDetails"
 import BookTagForm from "./Tag/BookTag";
 import RemoveBookTagForm from "./Tag/RemoveBookTag";
+import CategoryList from "./Category/CategoryList";
 
 
 export default function ApplicationViews({ isLoggedIn }) {
@@ -55,6 +56,9 @@ export default function ApplicationViews({ isLoggedIn }) {
                 </Route>
                 <Route path="/editTag/:id">
                     {isLoggedIn ? <TagUpdateForm /> : <Redirect to="/login" />}
+                </Route>
+                <Route path="/category" exact>
+                    {isLoggedIn ? <CategoryList /> : <Redirect to="/login" />}
                 </Route>
                 <Route path="/login">
                     <Login />
