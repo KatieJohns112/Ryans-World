@@ -37,10 +37,10 @@ export default function Header({ isLoggedIn }) {
                                     <NavLink className='nav_item' tag={RRNavLink} to="/tag">Tags</NavLink>
                                 </li>
                                 <li className='nav_item'>
-                                    <NavLink className='nav_item' tag={RRNavLink} to="/category">Categories</NavLink>
+                                    <NavLink className='nav_item' tag={RRNavLink} to="/comment">Comments</NavLink>
                                 </li>
                                 <li className='nav_item'>
-                                    <NavLink className='nav_item' tag={RRNavLink} to="/comment">Comments</NavLink>
+                                    <NavLink className='nav_item' tag={RRNavLink} to="/category">Categories</NavLink>
                                 </li>
                                 <li className='nav_item_logout'>
                                     <a aria-current="page" className="nav-link"

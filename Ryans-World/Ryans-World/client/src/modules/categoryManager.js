@@ -56,3 +56,15 @@ export const getCategory = (id) => {
         },
     }).then((res) => res.json());
 };
+
+export const deleteCategory = (id) => {
+    return getToken().then(token => {
+        return fetch(`${baseUrl}/${id}`, {
+            method: "DELETE",
+            headers: {
+                Authorization: `Bearer ${token}`,
+                "Content-Type": "application/json",
+            },
+        })
+    })
+}

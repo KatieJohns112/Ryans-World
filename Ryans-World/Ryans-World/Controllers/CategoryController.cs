@@ -51,5 +51,12 @@ namespace Ryans_World.Controllers
             var tag = _categoryRepository.GetCategoryById(id);
             return Ok(tag);
         }
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            _categoryRepository.Delete(id);
+            return NoContent();
+        }
     }
 }
