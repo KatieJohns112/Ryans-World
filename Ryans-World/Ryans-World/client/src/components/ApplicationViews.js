@@ -15,6 +15,7 @@ import BookTagForm from "./Tag/BookTag";
 import RemoveBookTagForm from "./Tag/RemoveBookTag";
 import CategoryList from "./Category/CategoryList";
 import { CategoryForm } from "./Category/AddCategory";
+import { CategoryUpdateForm } from "./Category/UpdateCategory"
 
 
 export default function ApplicationViews({ isLoggedIn }) {
@@ -63,6 +64,9 @@ export default function ApplicationViews({ isLoggedIn }) {
                 </Route>
                 <Route path="/category/create">
                     {isLoggedIn ? <CategoryForm /> : <Redirect to="/login" />}
+                </Route>
+                <Route path="/editCategory/:id">
+                    {isLoggedIn ? <CategoryUpdateForm /> : <Redirect to="/login" />}
                 </Route>
                 <Route path="/login">
                     <Login />
