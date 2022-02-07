@@ -10,5 +10,8 @@ namespace Ryans_World.Repositories
     {
         List<Category> GetAll();
         void Add(Category category);
+        Category GetCategoryById(int id);
+        void Update(Category category);
+
     }
 }

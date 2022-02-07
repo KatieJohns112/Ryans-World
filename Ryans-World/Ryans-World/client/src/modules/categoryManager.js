@@ -37,3 +37,22 @@ export const addCategory = (newCategory) => {
         })
     })
 }
+
+export const updateCategory = (category) => {
+    return fetch(`${baseUrl}/${category.id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(category),
+    });
+};
+
+export const getCategory = (id) => {
+    return fetch(`${baseUrl}/${id}`, {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+        },
+    }).then((res) => res.json());
+};
