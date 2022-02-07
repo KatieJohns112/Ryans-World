@@ -12,6 +12,7 @@ namespace Ryans_World.Repositories
         void Add(Category category);
         Category GetCategoryById(int id);
         void Update(Category category);
+        void Delete(int id);
 
     }
 }
