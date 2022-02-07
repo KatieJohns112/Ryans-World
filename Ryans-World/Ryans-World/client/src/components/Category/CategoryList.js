@@ -20,6 +20,13 @@ export const CategoryList = () => {
 
     return (
         <>
+            <div className="NewTag">
+                <button type="button"
+                    className="NewTagButton"
+                    onClick={() => { history.push("/category/create"); }}>
+                    <p className="CreateNewTag">Create a new Category</p>
+                </button>
+            </div>
             <div>
                 <div className="MainTag">
                     <div className="TagContent">
