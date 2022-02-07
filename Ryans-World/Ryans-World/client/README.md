@@ -39,5 +39,5 @@ The logged in user can navigate to the `Tag` link in the navbar where they can a
 
 ## Documentation
 
-| [dbdiagram] <a href=https://dbdiagram.io/d/61eadec57cf3fc0e7c524a78></a>| [wireframe] <a href=https://www.figma.com/file/jlEg0hz3QSKZHVCOCL4T9Y/Ryan's-World?node-id=0%3A1></a>
+| [dbdiagram] <a href=https://dbdiagram.io/d/61eadec57cf3fc0e7c524a78></a>| [wireframe] https://www.figma.com/file/jlEg0hz3QSKZHVCOCL4T9Y/Ryan's-World?node-id=0%3A1
 
