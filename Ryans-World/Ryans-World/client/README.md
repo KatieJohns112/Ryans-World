@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# Ryan's World 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Initial Setup 
 
-## Available Scripts
+1. Clone this repository 
+1. Run `git init` from the root directory of Ryan's World (the same directory that the `.sln` file is in) 
 
-In the project directory, you can run:
+> **NOTE:** Make sure that you do this before you run `create-react-app` in the `client` directory
 
-### `npm start`
+## SQL Database Setup
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Run both of the SQL Scripts included in this Repo.
+1. Run `SELECT` SQL commands in a Query window to see what data this Repo consists of.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Server Side
 
-### `npm test`
+1. Install Nuget Packages `Microsoft.Data.SQLClient` version 4.0.1 and `Microsoft.ASP.Net.Core.Authentication.JWTBearer`version 5.0.5
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Client Side
 
-### `npm run build`
+1. In `client` directory and run `npx create-react-app .`
+1. Install firebase and react router using `npm install react-router-dom@5.2.0 firebase@8.7.1`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### When initialing running this app run the back end server then `npm start` inside the `client` directory in the repo.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## How to navigate Ryan's World
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Upon serving the correct hosts through your browser, you will be prompted with an option to sign in or register as a new user. You will need to register as a new user.
 
-### `npm run eject`
+After creating your account, you will notice five nav bar selections allowing users to navigate to Home, Book, Tags, Categories or Comments.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+You can begin creating your Book list by navigating to the `Book` link in the nav bar. After selecting the `Create new Book` button you will be prompted with a form to create a new Book using an ImageURL, Title, Author, Favorite Scale, and Day of the Week to read.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Once you have have created a new Book using the `Create new Book` form it will populate under the `Book` link in the navbar. You will also have the ability to Update, Delete, or view the Books Details if so desired.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+A logged in user will have the same capabilities to create a Tag as they had with creating a new Book.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The logged in user can navigate to the `Tag` link in the navbar where they can also Update, Delete, or view a Tag's details.
 
-## Learn More
+## Documentation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+| [dbdiagram] <a href=https://dbdiagram.io/d/61eadec57cf3fc0e7c524a78></a>| [wireframe] <a href=https://www.figma.com/file/jlEg0hz3QSKZHVCOCL4T9Y/Ryan's-World?node-id=0%3A1></a>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
