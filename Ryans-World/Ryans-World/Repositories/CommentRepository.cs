@@ -35,6 +35,7 @@ namespace Ryans_World.Repositories
                         Comment comment = new Comment()
                         {
                             Content = reader.GetString(reader.GetOrdinal("content")),
+                            Id = reader.GetInt32(reader.GetOrdinal("Id")),
                             CreateDateTime = reader.GetDateTime(reader.GetOrdinal("createDateTime")),
                             BookId = reader.GetInt32(reader.GetOrdinal("BookId")),
                             UserProfileId = reader.GetInt32(reader.GetOrdinal("UserProfileId")),

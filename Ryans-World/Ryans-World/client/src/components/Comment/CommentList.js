@@ -26,7 +26,7 @@ export const CommentList = () => {
                     </button>
                 </div>
                 <div>{comments.map(comment =>
-                    console.log(comment))}
+                    <CommentCard key={comment.id} comment={comment} />)}
                 </div>
             </div>
         </>

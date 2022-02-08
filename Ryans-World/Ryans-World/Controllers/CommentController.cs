@@ -37,7 +37,7 @@ namespace Ryans_World.Controllers
             comment.UserProfileId = currentUser.Id;
             comment.CreateDateTime = DateTime.Now;
             _commentRepository.Add(comment);
-            return CreatedAtAction("Get", new { id = comment.Id }, comment);
+            return NoContent();
         }
 
         private string GetCurrentUserProfileId()
