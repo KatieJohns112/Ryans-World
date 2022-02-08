@@ -52,5 +52,24 @@ namespace Ryans_World.Controllers
             _commentRepository.Delete(id);
             return NoContent();
         }
+
+        [HttpPut("{id}")]
+        public IActionResult Put(int id, Comment comment)
+        {
+            if (id != comment.Id)
+            {
+                return BadRequest();
+            }
+
+            _commentRepository.Update(comment);
+            return NoContent();
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult Index(int id)
+        {
+            var books = _commentRepository.GetCommentById(id);
+            return Ok(books);
+        }
     }
 }

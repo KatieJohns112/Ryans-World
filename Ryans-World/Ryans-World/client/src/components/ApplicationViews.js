@@ -20,6 +20,7 @@ import DeleteCategory from "./Category/DeleteCategory";
 import CommentList from "./Comment/CommentList";
 import CommentForm from "./Comment/AddComment";
 import DeleteComment from "./Comment/DeleteComment";
+import UpdateComment from "./Comment/UpdateComment";
 
 
 export default function ApplicationViews({ isLoggedIn }) {
@@ -83,6 +84,9 @@ export default function ApplicationViews({ isLoggedIn }) {
                 </Route>
                 <Route path="/deleteComment/:id">
                     {isLoggedIn ? <DeleteComment userparams /> : <Redirect to="/login" />}
+                </Route>
+                <Route path="/editComment/:id">
+                    {isLoggedIn ? <UpdateComment /> : <Redirect to="/login" />}
                 </Route>
                 <Route path="/login">
                     <Login />

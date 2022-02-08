@@ -44,3 +44,22 @@ export const deleteComment = (id) => {
         })
     })
 }
+
+export const updateComment = (comment) => {
+    return fetch(`${baseUrl}/${comment.id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(comment),
+    })
+}
+
+export const getCommentById = (commentId) => {
+    return fetch(baseUrl + `/${commentId}`, {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+        },
+    }).then((resp) => resp.json());
+};
