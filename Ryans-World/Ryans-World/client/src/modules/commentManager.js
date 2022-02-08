@@ -20,6 +20,7 @@ export const getAllComments = () => {
 }
 
 export const addComment = (newComment) => {
+    console.log(newComment)
     return getToken().then(token => {
         return fetch(baseUrl, {
             method: "POST",
@@ -28,6 +29,18 @@ export const addComment = (newComment) => {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(newComment)
+        })
+    })
+}
+
+export const deleteComment = (id) => {
+    return getToken().then(token => {
+        return fetch(`${baseUrl}/${id}`, {
+            method: "DELETE",
+            headers: {
+                Authorization: `Bearer ${token}`,
+                "Content-Type": "application/json",
+            },
         })
     })
 }

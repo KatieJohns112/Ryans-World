@@ -46,5 +46,11 @@ namespace Ryans_World.Controllers
             return id;
         }
 
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            _commentRepository.Delete(id);
+            return NoContent();
+        }
     }
 }

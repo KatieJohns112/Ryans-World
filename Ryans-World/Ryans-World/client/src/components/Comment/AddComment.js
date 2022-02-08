@@ -7,7 +7,7 @@ import { useEffect } from "react";
 export const CommentForm = () => {
     const [comment, setComment] = useState({
         content: "",
-        bookId: 1,
+        bookId: 1
     });
 
 
@@ -45,12 +45,6 @@ export const CommentForm = () => {
                         <div className="form_group">
                             <label htmlFor="content">Content : </label>
                             <input type="text" id="content" onChange={handleControlledInputChange} required autoFocus className="form-control" value={comment.content} />
-                        </div>
-                    </fieldset>
-                    <fieldset className="NewTagName">
-                        <div className="form_group">
-                            <label htmlFor="content">Book Name : </label>
-                            <input type="book" id="book" onChange={handleControlledInputChange} required autoFocus className="form-control" value={comment.title} />
                         </div>
                     </fieldset>
                     <fieldset className="event_fieldset">

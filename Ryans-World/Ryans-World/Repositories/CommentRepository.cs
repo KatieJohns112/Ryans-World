@@ -1,6 +1,7 @@
 ﻿using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 using Ryans_World.Models;
+using Ryans_World.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -74,6 +75,21 @@ namespace Ryans_World.Repositories
                     cmd.Parameters.AddWithValue("@UserProfileId", comment.UserProfileId);
 
                     comment.Id = (int)cmd.ExecuteScalar();
+                }
+            }
+        }
+
+        public void Delete(int id)
+        {
+            using (var conn = Connection)
+            {
+                conn.Open();
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = @"DELETE FROM Comment WHERE Id = @Id";
+
+                    DbUtils.AddParameter(cmd, "@id", id);
+                    cmd.ExecuteNonQuery();
                 }
             }
         }
