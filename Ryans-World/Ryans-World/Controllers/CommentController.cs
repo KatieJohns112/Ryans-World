@@ -37,7 +37,7 @@ namespace Ryans_World.Controllers
             comment.UserProfileId = currentUser.Id;
             comment.CreateDateTime = DateTime.Now;
             _commentRepository.Add(comment);
-            return CreatedAtAction("Get", new { id = comment.Id }, comment);
+            return NoContent();
         }
 
         private string GetCurrentUserProfileId()
@@ -46,5 +46,11 @@ namespace Ryans_World.Controllers
             return id;
         }
 
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            _commentRepository.Delete(id);
+            return NoContent();
+        }
     }
 }

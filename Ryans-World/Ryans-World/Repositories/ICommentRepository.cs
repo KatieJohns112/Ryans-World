@@ -7,5 +7,6 @@ namespace Ryans_World.Repositories
     {
         void Add(Comment comment);
         List<Comment> GetAllComments();
+        void Delete(int id);
     }
 }

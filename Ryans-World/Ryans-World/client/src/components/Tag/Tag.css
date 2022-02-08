@@ -499,3 +499,7 @@
 .remove-booktag-button:hover {
     background-color: rgb(141, 65, 65);
 }
+
+.NameDeleteComment {
+    margin-left: 20cm;
+}

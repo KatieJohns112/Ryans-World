@@ -4,9 +4,8 @@ import { getAllComments } from "../../modules/commentManager";
 import { useParams, useHistory } from "react-router-dom";
 
 export const CommentList = () => {
-    const [comments, setComments] = useState([]);
-
     const history = useHistory();
+    const [comments, setComments] = useState([]);
 
     const getComments = () => {
         getAllComments().then(comments => setComments(comments));
@@ -19,15 +18,15 @@ export const CommentList = () => {
     return (
         <>
             <div>
-                <div className="NewTag">
+                <div className="NewComment">
                     <button type="button"
-                        className="NewTagButton"
+                        className="NewCommentButton"
                         onClick={() => { history.push("/comment/create"); }}>
-                        <p className="CreateNewTag">Create a new Category</p>
+                        <p className="CreateNewComment">Create a new Comment</p>
                     </button>
                 </div>
-                <div>
-                    <div>{comments.map(comment => <CommentCard key={comment.id} comment={comment} />)}</div>
+                <div>{comments.map(comment =>
+                    <CommentCard key={comment.id} comment={comment} />)}
                 </div>
             </div>
         </>
