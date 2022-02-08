@@ -94,5 +94,60 @@ namespace Ryans_World.Repositories
                 }
             }
         }
+
+        public void Update(Comment comment)
+        {
+            using (SqlConnection conn = Connection)
+            {
+                conn.Open();
+                using (SqlCommand cmd = conn.CreateCommand())
+                {
+
+                    cmd.CommandText = @"UPDATE Comment
+                                        SET Content = @content                                        
+                                        WHERE id = @id";
+
+                    cmd.Parameters.AddWithValue("@content", comment.Content);
+                    cmd.Parameters.AddWithValue("@id", comment.Id);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public Comment GetCommentById(int id)
+        {
+            using (var conn = Connection)
+            {
+                conn.Open();
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = @"
+                               SELECT Id, Content, CreateDateTime, BookId
+                               FROM Comment
+                               WHERE Id = @id";
+
+                    cmd.Parameters.AddWithValue("@id", id);
+                    Comment comment = null;
+
+                    var reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        if (comment == null)
+                        {
+                            comment = new Comment()
+                            {
+                                Id = reader.GetInt32(reader.GetOrdinal("Id")),
+                                BookId = reader.GetInt32(reader.GetOrdinal("BookId")),
+                                Content = reader.GetString(reader.GetOrdinal("Content")),
+                                CreateDateTime = reader.GetDateTime(reader.GetOrdinal("CreateDateTime"))
+                            };
+                        }
+                    }
+                    reader.Close();
+                    return comment;
+                }
+            }
+        }
     }
 }

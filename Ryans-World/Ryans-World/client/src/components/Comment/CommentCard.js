@@ -12,6 +12,10 @@ export const CommentCard = ({ comment }) => {
         history.push(`/deleteComment/${comment.id}`)
     };
 
+    const handleUpdateComment = () => {
+        history.push(`/editComment/${comment.id}`);
+    };
+
     return (
         <>
             <div className="MainCommentBox">
@@ -21,11 +25,15 @@ export const CommentCard = ({ comment }) => {
 
                     <div className="CommentCard">
                         <p className="CommentElement">Author : {comment.userProfile.displayName}</p>
-                        <p className="CommentElement">Content : {comment.content}</p>
-                        <p className="CommentElement">Creation Date : {getReadableDate(comment.createDateTime)}</p>
+                        <p className="CommentElement">Comment on : {comment.book.title}</p>
+                        <p className="CommentElement">  {comment.content}</p>
+                        <p className="CommentElement">Submitted on : {getReadableDate(comment.createDateTime)}</p>
                         <button className="DeleteTag"
                             type="button" onClick={() => handleDeleteComment()}>
                             <p className="NameDeleteComment">Delete </p></button>
+                        <button className="UpdateTag"
+                            type="button" onClick={() => handleUpdateComment(comment.id)}>
+                            <p className="NameUpdateTag">Update</p></button>
                     </div>
                 </div>
             </div>
