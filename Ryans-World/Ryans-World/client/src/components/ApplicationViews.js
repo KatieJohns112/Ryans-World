@@ -18,6 +18,7 @@ import { CategoryForm } from "./Category/AddCategory";
 import { CategoryUpdateForm } from "./Category/UpdateCategory"
 import DeleteCategory from "./Category/DeleteCategory";
 import CommentList from "./Comment/CommentList";
+import CommentForm from "./Comment/AddComment";
 
 
 export default function ApplicationViews({ isLoggedIn }) {
@@ -75,6 +76,9 @@ export default function ApplicationViews({ isLoggedIn }) {
                 </Route>
                 <Route path="/comment" exact>
                     {isLoggedIn ? <CommentList /> : <Redirect to="/login" />}
+                </Route>
+                <Route path="/comment/create">
+                    {isLoggedIn ? <CommentForm /> : <Redirect to="/login" />}
                 </Route>
                 <Route path="/login">
                     <Login />

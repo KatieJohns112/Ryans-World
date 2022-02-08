@@ -19,13 +19,19 @@ export const CommentList = () => {
     return (
         <>
             <div>
+                <div className="NewTag">
+                    <button type="button"
+                        className="NewTagButton"
+                        onClick={() => { history.push("/comment/create"); }}>
+                        <p className="CreateNewTag">Create a new Category</p>
+                    </button>
+                </div>
                 <div>
                     <div>{comments.map(comment => <CommentCard key={comment.id} comment={comment} />)}</div>
                 </div>
             </div>
         </>
     )
-
 }
 
 export default CommentList;
