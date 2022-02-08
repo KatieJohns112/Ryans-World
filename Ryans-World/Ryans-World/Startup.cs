@@ -34,6 +34,7 @@ namespace Ryans_World
             services.AddTransient<ITagRepository, TagRepository>();
             services.AddTransient<IBookTagRepository, BookTagRepository>();
             services.AddTransient<ICategoryRepository, CategoryRepository>();
+            services.AddTransient<ICommentRepository, CommentRepository>();
 
             var firebaseProjectId = Configuration.GetValue<string>("FirebaseProjectId");
             var googleTokenUrl = $"https://securetoken.google.com/{firebaseProjectId}";

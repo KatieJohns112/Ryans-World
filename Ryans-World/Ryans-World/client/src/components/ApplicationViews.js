@@ -17,6 +17,7 @@ import CategoryList from "./Category/CategoryList";
 import { CategoryForm } from "./Category/AddCategory";
 import { CategoryUpdateForm } from "./Category/UpdateCategory"
 import DeleteCategory from "./Category/DeleteCategory";
+import CommentList from "./Comment/CommentList";
 
 
 export default function ApplicationViews({ isLoggedIn }) {
@@ -71,6 +72,9 @@ export default function ApplicationViews({ isLoggedIn }) {
                 </Route>
                 <Route path="/deleteCategory/:id">
                     {isLoggedIn ? <DeleteCategory userparams /> : <Redirect to="/login" />}
+                </Route>
+                <Route path="/comment" exact>
+                    {isLoggedIn ? <CommentList /> : <Redirect to="/login" />}
                 </Route>
                 <Route path="/login">
                     <Login />
