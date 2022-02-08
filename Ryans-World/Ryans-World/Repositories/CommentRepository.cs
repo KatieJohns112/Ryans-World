@@ -66,12 +66,12 @@ namespace Ryans_World.Repositories
                 {
                     cmd.CommandText = @"INSERT INTO Comment (Content, CreateDateTime, BookId, UserProfileId)
                                         OUTPUT INSERTED.ID
-                                        VALUE (@Content, @CreateDateTime, @BookId, @UserProfildId)";
+                                        VALUES (@Content, @CreateDateTime, @BookId, @UserProfileId)";
 
                     cmd.Parameters.AddWithValue("@Content", comment.Content);
-                    cmd.Parameters.AddWithValue("CreateDatetime", comment.CreateDateTime);
-                    cmd.Parameters.AddWithValue("BookId", comment.BookId);
-                    cmd.Parameters.AddWithValue("UserProfileId", comment.UserProfileId);
+                    cmd.Parameters.AddWithValue("@CreateDatetime", comment.CreateDateTime);
+                    cmd.Parameters.AddWithValue("@BookId", comment.BookId);
+                    cmd.Parameters.AddWithValue("@UserProfileId", comment.UserProfileId);
 
                     comment.Id = (int)cmd.ExecuteScalar();
                 }
