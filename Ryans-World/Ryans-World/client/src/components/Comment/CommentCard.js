@@ -1,5 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
+import "./Comment.css"
 
 export const CommentCard = ({ comment }) => {
     const getReadableDate = (date) => {
@@ -26,14 +27,16 @@ export const CommentCard = ({ comment }) => {
                     <div className="CommentCard">
                         <p className="CommentElement">Author : {comment.userProfile.displayName}</p>
                         <p className="CommentElement">Comment on : {comment.book.title}</p>
-                        <p className="CommentElement">  {comment.content}</p>
+                        <p className="CommentElement"> {comment.content}</p>
                         <p className="CommentElement">Submitted on : {getReadableDate(comment.createDateTime)}</p>
-                        <button className="DeleteTag"
-                            type="button" onClick={() => handleDeleteComment()}>
-                            <p className="NameDeleteComment">Delete </p></button>
-                        <button className="UpdateTag"
-                            type="button" onClick={() => handleUpdateComment(comment.id)}>
-                            <p className="NameUpdateTag">Update</p></button>
+                        <ul className="CommentButtons">
+                            <li><button className="DeleteComment"
+                                type="button" onClick={() => handleDeleteComment()}>
+                                <p className="NameDeleteComment">Delete </p></button></li>
+                            <button className="UpdateComment"
+                                type="button" onClick={() => handleUpdateComment(comment.id)}>
+                                <p className="NameUpdateComment">Update</p></button>
+                        </ul>
                     </div>
                 </div>
             </div>
