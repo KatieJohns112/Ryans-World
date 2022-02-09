@@ -15,24 +15,25 @@ const DeleteComment = () => {
     };
 
     return (
-        <form className="main-content">
-            <h2 className="_title">Delete Comment</h2>
-            <h5>Are you sure you want to delete this comment?</h5>
-            <Button
-                className="btn-add-delete"
-                color="danger"
-                onClick={handleConfirm}
-            >
-                Delete
-            </Button>
-            <Button
-                className="btn-add-edit"
-                color="secondary"
-                onClick={() => history.goBack()}
-            >
-                Cancel
-            </Button>
-        </form>
+        <>
+            <form className="DeleteCommentForm">
+                <p className="Text">Are you sure you want to delete this comment?</p>
+                <ul className="DeleteCommentButtons">
+                    <li><button
+                        className="ConfirmDeleteComment"
+                        onClick={handleConfirm}
+                    >
+                        Delete
+                    </button></li>
+                    <li><button
+                        className="ConfirmCancelComment"
+                        onClick={() => history.push("/comment")}
+                    >
+                        Cancel
+                    </button></li>
+                </ul>
+            </form>
+        </>
     );
 };
 

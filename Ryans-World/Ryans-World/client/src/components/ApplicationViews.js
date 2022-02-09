@@ -21,6 +21,7 @@ import CommentList from "./Comment/CommentList";
 import CommentForm from "./Comment/AddComment";
 import DeleteComment from "./Comment/DeleteComment";
 import UpdateComment from "./Comment/UpdateComment";
+import { Home } from "./Home/Home";
 
 
 export default function ApplicationViews({ isLoggedIn }) {
@@ -29,7 +30,7 @@ export default function ApplicationViews({ isLoggedIn }) {
         <main>
             <Switch>
                 <Route path="/" exact>
-                    {isLoggedIn ? <home /> : <Redirect to="/login" />}
+                    {isLoggedIn ? <Home /> : <Redirect to="/login" />}
                 </Route>
                 <Route path="/book" exact>
                     {isLoggedIn ? <BookList /> : <Redirect to="/login" />}
