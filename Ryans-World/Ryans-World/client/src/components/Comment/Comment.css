@@ -103,3 +103,84 @@ margin-top: -1em;
     margin-left: .3cm;
     margin-right: .3cm;
 }
+
+.EditCommentHeader {
+    display: flex;
+    justify-content: center;
+    font-family: Architects Daughter, sans sans-serif;
+    margin-top: 1cm;
+    margin-bottom: -2cm;
+    font-size: .8cm;
+}
+
+.UpdateCommentForm {
+    background-color:rgb(216, 215, 215);
+    padding-top: 2cm;
+    padding-bottom: 2cm;
+    margin-top: 3cm;
+    margin-left: 12cm;
+    margin-right: 12cm;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
+
+.UpdateCommentName {
+    margin-left: 4cm;
+    padding-top: .4cm;
+    font-family: Architects Daughter, sans-serif;
+    font-size: 22px;
+}
+
+.EditCommentNames {
+    margin-bottom: .1cm;
+}
+
+.UpdateCommentButtons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1cm;
+}
+
+.EditCommentButton {
+    margin-left: 12cm;
+}
+
+.CancelEditComment {
+    margin-left: .6cm;
+    background-color: rgb(190, 102, 102);
+    font-family: Architects Daughter, sans-serif;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: rgb(190, 102, 102);
+    box-sizing: border-box;
+    padding-left: .5cm;
+    padding-right: .5cm;
+    padding-top: .1cm;
+    padding-bottom: .1cm;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.CancelEditComment:hover {
+    background-color: rgb(141, 65, 65);
+}
+
+.submit_comment_button:hover {
+    background-color: #aa6a20;
+}
+
+.submit_comment_button {
+    background-color: rgb(209, 167, 104);
+    margin-left: 14cm;
+    padding-left: .5cm;
+    padding-right: .5cm;
+    padding-top: .1cm;
+    padding-bottom: .1cm;
+    font-family: Architects Daughter, sans-serif;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: rgb(209, 167, 104);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),0px 4px 4px rgba(0, 0, 0, 0.25);
+}
