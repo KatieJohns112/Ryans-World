@@ -43,8 +43,8 @@
     border-color: black;
     border-radius: 15px;
     border-width: 1px;
-    
     font-family: Architects Daughter, sans-serif;
+    margin-top: -17.5cm;
 }
 
 .Extras {
@@ -88,4 +88,61 @@
     border-style: solid;
     border-radius: 15px;
     margin-top: -.3cm;
+}
+
+.MainHomePageBox {
+    background-color: rgb(168, 167, 167);
+    margin-left: 13cm;
+    margin-right: 13cm;
+    height: 17.5cm;
+    border-style: solid;
+    border-color: black;
+    border-radius: 15px;
+    border-width: 1px;
+    font-family: Architects Daughter, sans-serif;
+}
+
+.stuff {
+  margin-left: 8cm;
+}
+
+.logo-logo-logo {
+    margin-left: .8cm;
+    width: 650px;
+    height: 300px;
+    margin-top: .5cm;
+    box-sizing: border-box;
+    border-style: solid;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    filter: blur(8px);
+    -webkit-filter: blur(3px);
+}
+
+.RyansSection {
+    font-size: .7cm;
+    margin-left: 9.5cm;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    margin-top: -4cm;
+    padding: .5cm;
+}
+
+.NavTips {
+    margin-left: 1cm;
+    font-size: .5cm;
+    font-weight: bold;
+}
+
+.NavTipsicon {
+    list-style: none;
+    color:black;
 }
