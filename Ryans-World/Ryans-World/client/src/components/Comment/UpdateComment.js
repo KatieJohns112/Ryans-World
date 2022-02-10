@@ -2,9 +2,11 @@ import react, { useEffect, useState } from "react"
 import { useHistory, useParams } from "react-router-dom";
 import { getCommentById } from "../../modules/commentManager";
 import { updateComment } from "../../modules/commentManager";
+import { getAllBooks } from "../../modules/bookManager";
 
 export const UpdateComment = () => {
-    const [comment, setComment] = useState([])
+    const [comment, setComment] = useState([]);
+    const [books, setBooks] = useState([]);
 
     const { id } = useParams();
 
@@ -13,6 +15,12 @@ export const UpdateComment = () => {
     useEffect((event) => {
         getCommentById(id).then(setComment)
     }, []);
+
+    useEffect(() => {
+        getAllBooks().then(books => {
+            setBooks(books);
+        })
+    })
 
     const handleControlledInputChange = (event) => {
         const newComment = { ...comment };
@@ -35,45 +43,43 @@ export const UpdateComment = () => {
 
     return (
         <>
-            <form className="main-content">
-                <h2 className="_title">Edit Comment:</h2>
-                <fieldset className="fieldset">
-                    <div className="form-group">
-                        <label htmlFor="subject">Comment :</label>
-                        <textarea
-                            type="text"
-                            id="content"
-                            onChange={handleControlledInputChange}
-                            required
-                            autoFocus
-                            rows="6"
-                            className="form-control"
-                            value={comment.content}
-                        />
-                    </div>
-                </fieldset>
-                {/* <fieldset className="event_fieldset">
-                    <div className="form-group">
-                        <label htmlFor="location">What book is this comment about? </label>
-                        <select value={books.bookId} name="bookId" id="bookId" onChange={handleControlledInputChange} className="form-control" >
-                            <option value="0">Select a book</option>
-                            {books.map(l => (
-                                <option key={l.id} value={l.id}>
-                                    {l.title}
-                                </option>
-                            ))}
-                        </select>
-                    </div>
-                </fieldset> */}
-                <button className="btn-add-save" onClick={handleClickSaveComment}>
-                    Submit
-                </button>
-                <button
-                    className="btn-add-edit"
-                    onClick={handleGoBack}
-                >
-                    Cancel
-                </button>
+            <h3 className="EditCommentHeader">Edit Comment</h3>
+            <form className="UpdateCommentForm">
+                <div className="UpdateCommentName">
+                    <label className="EditCommentNames" htmlFor="subject">Comment : </label>
+                    <textarea
+                        type="text"
+                        id="content"
+                        className="form-control"
+                        onChange={handleControlledInputChange}
+                        required
+                        value={comment.content}
+                    />
+                </div>
+                <div className="UpdateCommentName">
+                    <label className="EditCommentName" htmlFor="bookId">What book is this comment about? </label>
+                    <select value={books.bookId} name="bookId" id="bookId" onChange={handleControlledInputChange} className="form-control" >
+                        <option value="0">Select a book</option>
+                        {books.map(l => (
+                            <option key={l.id} value={l.id}>
+                                {l.title}
+                            </option>
+                        ))}
+                    </select>
+                </div>
+                <div className="UpdateCommentButtons">
+                    <button className="EditCommentButton"
+                        onClick={handleClickSaveComment}
+                        className="submit_comment_button">
+                        Submit
+                    </button>
+                    <button
+                        className="CancelEditComment"
+                        onClick={handleGoBack}
+                    >
+                        Cancel
+                    </button>
+                </div>
             </form>
         </>
     )
