@@ -13,13 +13,14 @@ export const Home = () => (
         <aside>
             <p className="HomeHeader">Check out these Cool Books !!</p>
             <ul className="BookToSee">
-                <li><img className="logo-logo" src={logo} alt="logo"></img> ☼ Llama Llama Red Pajama</li>
-                <li><img className="logo-logo" src={logo2} alt="logo"></img> ☼ Hair Love</li>
-                <li><img className="logo-logo" src={logo3} alt="logo"></img> ☼ Dragons love tacos</li>
-                <li><img className="logo-logo" src={logo4} alt="logo"></img> ☼ From Head to Toe</li>
-                <li><img className="logo-logo" src={logo6} alt="logo"></img> ☼ The Angry Dragon</li>
-                <li><img className="logo-logo" src={logo5} alt="logo"></img> ☼ Corduroy</li>
-                <li><img className="logo-logo" src={logo7} alt="logo"></img> ☼ I Love You like no Otter</li>
+                <li><img className="logo-logo" src={logo} alt="logo"></img> ☼ <a className="coloring_sheet" href="https://www.amazon.com/Llama-Red-Pajama-Anna-Dewdney/dp/0451474570/ref=sr_1_1?keywords=llama+llama+red+pajama&qid=1644503251&sr=8-1"> Llama Llama Red Pajama</a></li>
+                <li><img className="logo-logo" src={logo2} alt="logo"></img> ☼ <a className="coloring_sheet" href="https://www.amazon.com/Hair-Love-Matthew-Cherry/dp/0525553363/ref=sr_1_1?crid=2KUE0JY6FO6S8&keywords=hair+love&qid=1644503365&sprefix=hair+love%2Caps%2C83&sr=8-1"> Hair Love</a></li>
+                <li><img className="logo-logo" src={logo3} alt="logo"></img> ☼ <a className="coloring_sheet" href="https://www.amazon.com/Dragons-Love-Tacos-Adam-Rubin/dp/0803736800/ref=sr_1_1?crid=1GI36MR5913W8&keywords=dragons+love+tacos&qid=1644503465&sprefix=dragons+love+tacos%2Caps%2C83&sr=8-1"> Dragons Love Tacos</a></li>
+                <li><img className="logo-logo" src={logo4} alt="logo"></img> ☼ <a className="coloring_sheet" href="https://www.amazon.com/Head-Toe-Board-Book/dp/0694013013/ref=sr_1_30?crid=LDFH12TD4109&keywords=eric+carle&qid=1644503538&sprefix=eric+carle%2Caps%2C88&sr=8-30"> From Head to Toe</a></li>
+                <li><img className="logo-logo" src={logo6} alt="logo"></img> ☼ <a className="coloring_sheet" href="https://www.amazon.com/Angry-Dragon-Childrens-Preschool-Kindergarten/dp/1724136208/ref=sr_1_1_sspa?crid=1ZIAZK9EO45TZ&keywords=the+angry+dragon&qid=1644503594&sprefix=the+angry+dragon%2Caps%2C78&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVy
+                PUFNRkU0SVk0UDVVRjkmZW5jcnlwdGVkSWQ9QTA5NDI1NzcyQkVVOTRLUFBNRVZMJmVuY3J5cHRlZEFkSWQ9QTA2Nzc0OTgxTU9QUzhRNVkyTEdSJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ=="> The Angry Dragon</a></li>
+                <li><img className="logo-logo" src={logo5} alt="logo"></img> ☼ <a className="coloring_sheet" href="https://www.amazon.com/Corduroy-Don-Freeman/dp/0451470796/ref=sr_1_3?crid=3LC1FE9Q1WDPN&keywords=corduroy&qid=1644503644&sprefix=corduroy%2Caps%2C87&sr=8-3"> Corduroy</a></li>
+                <li><img className="logo-logo" src={logo7} alt="logo"></img> ☼ <a className="coloring_sheet" href="https://www.amazon.com/Love-You-Like-No-Otter/dp/1728213746/ref=sr_1_1?crid=5ALMDZFLI3CC&keywords=i+love+you+like+no+otter&qid=1644503710&sprefix=i+love+you+like+n%2Caps%2C86&sr=8-1"> I Love You Like no Otter</a></li>
             </ul>
         </aside>
     </div>
