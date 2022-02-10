@@ -7,6 +7,7 @@ import logo4 from "./Images/logo4.jpeg"
 import logo5 from "./Images/logo5.jpeg"
 import logo6 from "./Images/logo6.jpeg"
 import logo7 from "./Images/logo7.jpeg"
+import logo8 from "./Images/logo8.jpg"
 
 export const Home = () => (
     <><div class="HomeAside">
@@ -24,6 +25,17 @@ export const Home = () => (
             </ul>
         </aside>
     </div>
+        <div className="MainHomePageBox">
+            <img className="logo-logo-logo" src={logo8} alt="logo"></img>
+            <p className="RyansSection">Welcome to Ryan's World ! !</p>
+            <p className="NavTips">Some Helpful Navigation Tips : </p>
+            <ul>
+                <li className="NavTipsicon"> 📚 Located in the left aside you can find books you might want to add to your growing library collection. Simply click the link to be directed to AMAZON to purchase the new book.</li>
+                <li className="NavTipsicon"> 📚 Located in the right aside you can find many helpful external links for activities with your book library. Coloring sheets, storytime neccessities, and video links are located here.</li>
+                <li className="NavTipsicon"> 📚 You can add a book to your library by navigating to your book list and adding any book from your library. Remember this list will display ONLY your books !</li>
+                <li className="NavTipsicon"> 📚 Utilize the added comment feature to interact with other users by leaving comments about books in your library. Users can see any comment you leave as you can see any comment another user leaves.</li>
+            </ul>
+        </div>
         <div class="HomeAside2">
             <aside>
                 <p className="HomeHeader">Check out these Cool Links !!</p>
